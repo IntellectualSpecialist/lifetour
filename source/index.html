@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lifetour</title>
-    <meta name="description" content="Занимаемся туризмом — походы, поездки, восхождения. Подарим вам незабываемые впечатления от похода в горы. Находимся в г. Москва.">
+    <meta name="description" content="Занимаемся туризмом — походы, поездки, восхождения. Подарим вам незабываемые впечатления от похода в горы. Находимся в г. Москве.">
     <link rel="stylesheet" href="sass/style.scss">
   </head>
 
@@ -17,7 +17,7 @@
           <span class="main-header__burger-icon"></span>
         </a>
         <a class="main-header__logo logo" href="#">
-          <img src="/__spritemap#sprite-logo-light-view" width="142" height="42" alt="Логотип «Lifetour». Перейти на главную страницу.">
+          <img src="/__spritemap#sprite-logo-view" width="142" height="42" alt="Логотип «Lifetour». Перейти на главную страницу.">
         </a>
         <nav class="main-header__nav main-nav">
           <ul class="main-nav__list site-list">
@@ -51,7 +51,14 @@
           <div class="hero__slider slider slider--promo swiper">
             <div class="slider__wrapper swiper-wrapper">
               <div class="slider__slide swiper-slide">
-                <img src="#" width="320" height="568" alt="Кавказские горы">
+                <picture>
+                  <source width="1440" height="800" type="image/webp" media="(min-width: 1440px)" srcset="img/mountain-1-desktop@1x.webp, img/mountain-1-desktop@2x.webp 2x">
+                  <source width="768" height="1034" type="image/webp" media="(min-width: 768px)" srcset="img/mountain-1-tablet@1x.webp, img/mountain-1-tablet@2x.webp 2x">
+                  <source width="320" height="560" type="image/webp" srcset="img/mountain-1-mobile@1x.webp, img/mountain-1-mobile@2x.webp 2x">
+                  <source width="1440" height="800" type="image/jpeg" media="(min-width: 1440px)" srcset="img/mountain-1-desktop@1x.jpg, img/mountain-1-desktop@2x.jpg 2x">
+                  <source width="768" height="1034" type="image/jpeg" media="(min-width: 768px)" srcset="img/mountain-1-tablet@1x.jpg, img/mountain-1-tablet@2x.jpg 2x">
+                  <img src="img/mountain-1-mobile@1x.jpg" srcset="img/mountain-1-mobile@2x.jpg 2x" width="320" height="568" alt="Кавказские горы.">
+                </picture>
                 <div class="slider__info">
                   <div class="slider__text-content">
                     <h2>Захватывающие вершины Кавказа</h2>
@@ -76,7 +83,14 @@
               </div>
               <div class="slider__slide swiper-slide">
                 <div class="slider__slide swiper-slide">
-                  <img src="#" width="320" height="568" alt="Горы Камчатки">
+                  <picture>
+                    <source width="1440" height="800" type="image/webp" media="(min-width: 1440px)" srcset="img/mountain-2-desktop@1x.webp, img/mountain-2-desktop@2x.webp 2x">
+                    <source width="768" height="1034" type="image/webp" media="(min-width: 768px)" srcset="img/mountain-2-tablet@1x.webp, img/mountain-2-tablet@2x.webp 2x">
+                    <source width="320" height="560" type="image/webp" srcset="img/mountain-2-mobile@1x.webp, img/mountain-2-mobile@2x.webp 2x">
+                    <source width="1440" height="800" type="image/jpeg" media="(min-width: 1440px)" srcset="img/mountain-2-desktop@1x.jpg, img/mountain-2-desktop@2x.jpg 2x">
+                    <source width="768" height="1034" type="image/jpeg" media="(min-width: 768px)" srcset="img/mountain-2-tablet@1x.jpg, img/mountain-2-tablet@2x.jpg 2x">
+                    <img src="img/mountain-2-mobile@1x.jpg" srcset="img/mountain-2-mobile@2x.jpg 2x" width="320" height="568" alt="Горы Камчатки.">
+                  </picture>
                   <div class="slider__info">
                     <div class="slider__text-content">
                       <h2>Невероятная природа Камчатки</h2>
@@ -98,13 +112,25 @@
                       </li>
                     </ul>
                     <div class="slider__photos">
-                      <img src="#" width="442" height="365" alt="Две полароид-фотографии: на первой карьер, на второй путешествинница в горах.">
+                      <picture>
+                        <source width="410" height="459" type="image/webp" media="(min-width: 1440px)" srcset="img/photo-cards-desktop@1x.webp, img/photo-cards-desktop@2x.webp 2x">
+                        <source width="442" height="365" type="image/webp" media="(min-width: 768px)" srcset="img/photo-cards-tablet@1x.webp, img/photo-cards-tablet@2x.webp 2x">
+                        <source width="410" height="459" type="image/png" media="(min-width: 1440px)" srcset="img/photo-cards-desktop@1x.png, img/photo-cards-desktop@2x.png 2x">
+                        <img src="img/photo-cards-tablet@1x.png" srcset="img/photo-cards-tablet@2x.png 2x" width="442" height="365" loading="lazy" alt="Две полароид-фотографии: на первой карьер, на второй путешествинница в горах.">
+                      </picture>
                     </div>
                   </div>
                 </div>
               </div>
               <div class="slider__slide swiper-slide">
-                <img src="#" width="320" height="568" alt="Горы Алтая">
+                <picture>
+                  <source width="1440" height="800" type="image/webp" media="(min-width: 1440px)" srcset="img/mountain-3-desktop@1x.webp, img/mountain-3-desktop@2x.webp 2x">
+                  <source width="768" height="1034" type="image/webp" media="(min-width: 768px)" srcset="img/mountain-3-tablet@1x.webp, img/mountain-3-tablet@2x.webp 2x">
+                  <source width="320" height="560" type="image/webp" srcset="img/mountain-3-mobile@1x.webp, img/mountain-3-mobile@2x.webp 2x">
+                  <source width="1440" height="800" type="image/jpeg" media="(min-width: 1440px)" srcset="img/mountain-3-desktop@1x.jpg, img/mountain-3-desktop@2x.jpg 2x">
+                  <source width="768" height="1034" type="image/jpeg" media="(min-width: 768px)" srcset="img/mountain-3-tablet@1x.jpg, img/mountain-3-tablet@2x.jpg 2x">
+                  <img src="img/mountain-3-mobile@1x.jpg" srcset="img/mountain-3-mobile@2x.jpg 2x" width="320" height="568" alt="Горы Алтая.">
+                </picture>
                 <div class="slider__info">
                   <div class="slider__text-content">
                     <h2>Магические пейзажи Алтайского Края</h2>
@@ -157,7 +183,14 @@
             <div class="slider__wrapper swiper-wrapper">
               <div class="slider__slide swiper-slide">
                 <article class="tour-card">
-                  <img src="#" width="290" height="416" alt="Эльбрус">
+                  <picture>
+                    <source width="380" height="416" type="image/webp" media="(min-width: 1440px)" srcset="img/elbrus-desktop@1x.webp, img/elbrus-desktop@2x.webp 2x">
+                    <source width="330" height="416" type="image/webp" media="(min-width: 768px)" srcset="img/elbrus-tablet@1x.webp, img/elbrus-tablet@2x.webp 2x">
+                    <source width="290" height="416" type="image/webp" srcset="img/elbrus-mobile@1x.webp, img/elbrus-mobile@2x.webp 2x">
+                    <source width="380" height="416" type="image/jpeg" media="(min-width: 1440px)" srcset="img/elbrus-desktop@1x.jpg, img/elbrus-desktop@2x.jpg 2x">
+                    <source width="330" height="416" type="image/jpeg" media="(min-width: 768px)" srcset="img/elbrus-tablet@1x.jpg, img/elbrus-tablet@2x.jpg 2x">
+                    <img src="img/elbrus-mobile@1x.jpg" srcset="img/elbrus-mobile@2x.jpg 2x" width="290" height="416" alt="Эльбрус.">
+                  </picture>
                   <div class="tour-card__info">
                     <p class="tour-card__destination">Кавказ</p>
                     <ul class="tour-card__duration">
@@ -189,7 +222,14 @@
               </div>
               <div class="slider__slide swiper-slide">
                 <article class="tour-card">
-                  <img src="#" width="290" height="416" alt="Белуха">
+                  <picture>
+                    <source width="380" height="416" type="image/webp" media="(min-width: 1440px)" srcset="img/belukha-desktop@1x.webp, img/belukha-desktop@2x.webp 2x">
+                    <source width="330" height="416" type="image/webp" media="(min-width: 768px)" srcset="img/belukha-tablet@1x.webp, img/belukha-tablet@2x.webp 2x">
+                    <source width="290" height="416" type="image/webp" srcset="img/belukha-mobile@1x.webp, img/belukha-mobile@2x.webp 2x">
+                    <source width="380" height="416" type="image/jpeg" media="(min-width: 1440px)" srcset="img/belukha-desktop@1x.jpg, img/belukha-desktop@2x.jpg 2x">
+                    <source width="330" height="416" type="image/jpeg" media="(min-width: 768px)" srcset="img/belukha-tablet@1x.jpg, img/belukha-tablet@2x.jpg 2x">
+                    <img src="img/belukha-mobile@1x.jpg" srcset="img/belukha-mobile@2x.jpg 2x" width="290" height="416" alt="Белуха.">
+                  </picture>
                   <div class="tour-card__info">
                     <p class="tour-card__destination">Алтай</p>
                     <ul class="tour-card__duration">
@@ -221,7 +261,14 @@
               </div>
               <div class="slider__slide swiper-slide">
                 <article class="tour-card">
-                  <img src="#" width="290" height="416" alt="Фишт">
+                  <picture>
+                    <source width="380" height="416" type="image/webp" media="(min-width: 1440px)" srcset="img/fisht-desktop@1x.webp, img/fisht-desktop@2x.webp 2x">
+                    <source width="330" height="416" type="image/webp" media="(min-width: 768px)" srcset="img/fisht-tablet@1x.webp, img/fisht-tablet@2x.webp 2x">
+                    <source width="290" height="416" type="image/webp" srcset="img/fisht-mobile@1x.webp, img/fisht-mobile@2x.webp 2x">
+                    <source width="380" height="416" type="image/jpeg" media="(min-width: 1440px)" srcset="img/fisht-desktop@1x.jpg, img/fisht-desktop@2x.jpg 2x">
+                    <source width="330" height="416" type="image/jpeg" media="(min-width: 768px)" srcset="img/fisht-tablet@1x.jpg, img/fisht-tablet@2x.jpg 2x">
+                    <img src="img/fisht-mobile@1x.jpg" srcset="img/fisht-mobile@2x.jpg 2x" width="290" height="416" alt="Фишт.">
+                  </picture>
                   <div class="tour-card__info">
                     <p class="tour-card__destination">Адыгея</p>
                     <ul class="tour-card__duration">
@@ -253,7 +300,12 @@
               </div>
               <div class="slider__slide swiper-slide">
                 <article class="tour-card">
-                  <img src="#" width="290" height="416" alt="Манарага">
+                  <picture>
+                    <source width="330" height="416" type="image/webp" media="(min-width: 768px)" srcset="img/manaraga-tablet@1x.webp, img/manaraga-tablet@2x.webp 2x">
+                    <source width="290" height="416" type="image/webp" srcset="img/manaraga-mobile@1x.webp, img/manaraga-mobile@2x.webp 2x">
+                    <source width="330" height="416" type="image/jpeg" media="(min-width: 768px)" srcset="img/manaraga-tablet@1x.jpg, img/manaraga-tablet@2x.jpg 2x">
+                    <img src="img/manaraga-mobile@1x.jpg" srcset="img/manaraga-mobile@2x.jpg 2x" width="290" height="416" alt="Манарага.">
+                  </picture>
                   <div class="tour-card__info">
                     <p class="tour-card__destination">Урал</p>
                     <ul class="tour-card__duration">
@@ -307,7 +359,14 @@
                 <div class="slider__slide swiper-slide">
                   <article class="instructor-card">
                     <div class="instructor-card__image">
-                      <img src="#" width="260" height="200" alt="Фотография инструктора">
+                      <picture>
+                        <source width="255" height="200" type="image/webp" media="(min-width: 1440px)" srcset="img/instructor-1-desktop@1x.webp, img/instructor-1-desktop@2x.webp 2x">
+                        <source width="183" height="200" type="image/webp" media="(min-width: 768px)" srcset="img/instructor-1-tablet@1x.webp, img/instructor-1-tablet@2x.webp 2x">
+                        <source width="260" height="200" type="image/webp" srcset="img/instructor-1-mobile@1x.webp, img/instructor-1-mobile@2x.webp 2x">
+                        <source width="255" height="200" type="image/jpeg" media="(min-width: 1440px)" srcset="img/instructor-1-desktop@1x.jpg, img/instructor-1-desktop@2x.jpg 2x">
+                        <source width="183" height="200" type="image/jpeg" media="(min-width: 768px)" srcset="img/instructor-1-tablet@1x.jpg, img/instructor-1-tablet@2x.jpg 2x">
+                        <img src="img/instructor-1-mobile@1x.jpg" srcset="img/instructor-1-mobile@2x.jpg 2x" width="260" height="200" alt="Фотография инструктора.">
+                      </picture>
                     </div>
                     <header class="instructor-card__header">
                       <div class="instructor-card__title-wrapper">
@@ -332,7 +391,14 @@
                 <div class="slider__slide swiper-slide">
                   <article class="instructor-card">
                     <div class="instructor-card__image">
-                      <img src="#" width="260" height="200" alt="Фотография инструктора">
+                      <picture>
+                        <source width="255" height="200" type="image/webp" media="(min-width: 1440px)" srcset="img/instructor-2-desktop@1x.webp, img/instructor-2-desktop@2x.webp 2x">
+                        <source width="183" height="200" type="image/webp" media="(min-width: 768px)" srcset="img/instructor-2-tablet@1x.webp, img/instructor-2-tablet@2x.webp 2x">
+                        <source width="260" height="200" type="image/webp" srcset="img/instructor-2-desktop@1x.webp, img/instructor-2-desktop@2x.webp 2x">
+                        <source width="255" height="200" type="image/jpeg" media="(min-width: 1440px)" srcset="img/instructor-2-desktop@1x.jpg, img/instructor-2-desktop@2x.jpg 2x">
+                        <source width="183" height="200" type="image/jpeg" media="(min-width: 768px)" srcset="img/instructor-2-tablet@1x.jpg, img/instructor-2-tablet@2x.jpg 2x">
+                        <img src="img/instructor-2-desktop@1x.jpg" srcset="img/instructor-2-desktop@2x.jpg 2x" width="260" height="200" alt="Фотография инструктора.">
+                      </picture>
                     </div>
                     <header class="instructor-card__header">
                       <div class="instructor-card__title-wrapper">
@@ -357,7 +423,14 @@
                 <div class="slider__slide swiper-slide">
                   <article class="instructor-card">
                     <div class="instructor-card__image">
-                      <img src="#" width="260" height="200" alt="Фотография инструктора">
+                      <picture>
+                        <source width="255" height="200" type="image/webp" media="(min-width: 1440px)" srcset="img/instructor-3-desktop@1x.webp, img/instructor-3-desktop@2x.webp 2x">
+                        <source width="183" height="200" type="image/webp" media="(min-width: 768px)" srcset="img/instructor-3-tablet@1x.webp, img/instructor-3-tablet@2x.webp 2x">
+                        <source width="260" height="200" type="image/webp" srcset="img/instructor-3-mobile@1x.webp, img/instructor-3-mobile@2x.webp 2x">
+                        <source width="255" height="200" type="image/jpeg" media="(min-width: 1440px)" srcset="img/instructor-3-desktop@1x.jpg, img/instructor-3-desktop@2x.jpg 2x">
+                        <source width="183" height="200" type="image/jpeg" media="(min-width: 768px)" srcset="img/instructor-3-tablet@1x.jpg, img/instructor-3-tablet@2x.jpg 2x">
+                        <img src="img/instructor-3-mobile@1x.jpg" srcset="img/instructor-3-mobile@2x.jpg 2x" width="260" height="200" alt="Фотография инструктора.">
+                      </picture>
                     </div>
                     <header class="instructor-card__header">
                       <div class="instructor-card__title-wrapper">
@@ -382,7 +455,10 @@
                 <div class="slider__slide swiper-slide">
                   <article class="instructor-card">
                     <div class="instructor-card__image">
-                      <img src="#" width="260" height="200" alt="Фотография инструктора">
+                      <picture>
+                        <source width="260" height="200" type="image/webp" srcset="img/instructor-4-desktop@1x.webp, img/instructor-4-desktop@2x.webp 2x">
+                        <img src="img/instructor-4-desktop@1x.jpg" srcset="img/instructor-4-desktop.jpg 2x" width="260" height="200" alt="Фотография инструктора.">
+                      </picture>
                     </div>
                     <header class="instructor-card__header">
                       <div class="instructor-card__title-wrapper">
@@ -407,7 +483,10 @@
                 <div class="slider__slide swiper-slide">
                   <article class="instructor-card">
                     <div class="instructor-card__image">
-                      <img src="#" width="260" height="200" alt="Фотография инструктора">
+                      <picture>
+                        <source width="260" height="200" type="image/webp" srcset="img/instructor-5-desktop@1x.webp, img/instructor-5-desktop@2x.webp 2x">
+                        <img src="img/instructor-5-desktop@1x.jpg" srcset="img/instructor-5-desktop.jpg 2x" width="260" height="200" alt="Фотография инструктора.">
+                      </picture>
                     </div>
                     <header class="instructor-card__header">
                       <div class="instructor-card__title-wrapper">
@@ -450,7 +529,14 @@
       <article class="about" id="about" data-test="about">
         <div class="about__wrapper container">
           <div class="about__image">
-            <img src="#" width="320" height="400" alt="Группа туристов спускается с горы">
+            <picture>
+              <source width="660" height="498" type="image/webp" media="(min-width: 1440px)" srcset="img/tourists-desktop@1x.webp, img/tourists-desktop@2x.webp 2x">
+              <source width="450" height="350" type="image/webp" media="(min-width: 768px)" srcset="img/tourists-tablet@1x.webp, img/tourists-tablet@2x.webp 2x">
+              <source width="320" height="400" type="image/webp" srcset="img/tourists-mobile@1x.webp, img/tourists-mobile@2x.webp 2x">
+              <source width="660" height="498" type="image/jpeg" media="(min-width: 1440px)" srcset="img/tourists-desktop@1x.jpg, img/tourists-desktop@2x.jpg 2x">
+              <source width="450" height="350" type="image/jpeg" media="(min-width: 768px)" srcset="img/tourists-tablet@1x.jpg, img/tourists-tablet@2x.jpg 2x">
+              <img src="img/tourists-mobile@1x.jpg" srcset="img/tourists-mobile@2x.jpg 2x" width="320" height="400" alt="Группа туристов спускается с горы.">
+            </picture>
           </div>
           <div class="about__info">
             <div class="about__title title-middle" data-value="О нас">
@@ -473,57 +559,85 @@
           <div class="reviews__slider slider slider--training swiper">
             <div class="slider__wrapper swiper-wrapper">
               <div class="slider__slide swiper-slide">
-                <article class="review-card">
+                <blockquote class="review-card">
                   <div class="review-card__image">
-                    <img src="#" width="250" height="169" alt="Фотография клиента">
+                    <picture>
+                      <source width="258" height="253" type="image/webp" media="(min-width: 1440px)" srcset="img/client-1-desktop@1x.webp, img/client-1-desktop@2x.webp 2x">
+                      <source width="186" height="237" type="image/webp" media="(min-width: 768px)" srcset="img/client-1-tablet@1x.webp, img/client-1-tablet@2x.webp 2x">
+                      <source width="250" height="169" type="image/webp" srcset="img/client-1-mobile@1x.webp, img/client-1-mobile@2x.webp 2x">
+                      <source width="258" height="253" type="image/jpeg" media="(min-width: 1440px)" srcset="img/client-1-desktop@1x.jpg, img/client-1-desktop@2x.jpg 2x">
+                      <source width="186" height="237" type="image/jpeg" media="(min-width: 768px)" srcset="img/client-1-tablet@1x.jpg, img/client-1-tablet@2x.jpg 2x">
+                      <img src="img/client-1-mobile@1x.jpg" srcset="img/client-1-mobile@2x.jpg 2x" width="250" height="169" alt="Фотография клиента.">
+                    </picture>
                   </div>
                   <div class="review-card__text">
                     <div class="review-card__text-content">
-                      <blockquote>Осенью ходили в поход на Алтай с друзьями. Впечатления потрясающие! Инструкторы, настоящие эксперты, всему научили, все показали. Делились историями о местах, людях, культуре места. С уверенностью могу сказать, что жизнь разделилась на до этого и после. Ещё никогда не отдыхал так душой и телом. Всем очень рекомендую!</blockquote>
+                      <p>Осенью ходили в поход на Алтай с друзьями. Впечатления потрясающие! Инструкторы, настоящие эксперты, всему научили, все показали. Делились историями о местах, людях, культуре места. С уверенностью могу сказать, что жизнь разделилась на до этого и после. Ещё никогда не отдыхал так душой и телом. Всем очень рекомендую!</p>
                     </div>
-                    <h3 class="review-card__title">Фролов Александр</h3>
+                    <cite class="review-card__name">Фролов Александр</cite>
                     <p class="review-card__about">38 лет, Москва</p>
                   </div>
-                </article>
+                </blockquote>
               </div>
               <div class="slider__slide swiper-slide">
-                <article class="review-card">
+                <blockquote class="review-card">
                   <div class="review-card__image">
-                    <img src="#" width="250" height="169" alt="Фотография клиента">
+                    <picture>
+                      <source width="258" height="253" type="image/webp" media="(min-width: 1440px)" srcset="img/client-2-desktop@1x.webp, img/client-2-desktop@2x.webp 2x">
+                      <source width="186" height="237" type="image/webp" media="(min-width: 768px)" srcset="img/client-2-tablet@1x.webp, img/client-2-tablet@2x.webp 2x">
+                      <source width="250" height="169" type="image/webp" srcset="img/client-2-mobile@1x.webp, img/client-2-mobile@2x.webp 2x">
+                      <source width="258" height="253" type="image/jpeg" media="(min-width: 1440px)" srcset="img/client-2-desktop@1x.jpg, img/client-2-desktop@2x.jpg 2x">
+                      <source width="186" height="237" type="image/jpeg" media="(min-width: 768px)" srcset="img/client-2-tablet@1x.jpg, img/client-2-tablet@2x.jpg 2x">
+                      <img src="img/client-2-mobile@1x.jpg" srcset="img/client-2-mobile@2x.jpg 2x" width="250" height="169" alt="Фотография клиента.">
+                    </picture>
                   </div>
                   <div class="review-card__text">
                     <div class="review-card__text-content">
-                      <blockquote>Хороший полноценный поход с разнообразными локациями. В начале дорога идёт по лыжне, далее прошли мимо полигона, по болотам, у озёр и лесных ручьёв, остатков дач конца 19 века. Было очень интересно! Инструктор Федор дружелюбный, внимательный к технике безопасности и своим туристам. Всем советую этот тур.</blockquote>
+                      <p>Хороший полноценный поход с разнообразными локациями. В начале дорога идёт по лыжне, далее прошли мимо полигона, по болотам, у озёр и лесных ручьёв, остатков дач конца 19 века. Было очень интересно! Инструктор Федор дружелюбный, внимательный к технике безопасности и своим туристам. Всем советую этот тур.</p>
                     </div>
-                    <h3 class="review-card__title">Иван Соловьёв</h3>
+                    <cite class="review-card__name">Иван Соловьёв</cite>
                     <p class="review-card__about">25 лет, Владивосток</p>
                   </div>
-                </article>
+                </blockquote>
               </div>
               <div class="slider__slide swiper-slide">
-                <article class="review-card">
+                <blockquote class="review-card">
                   <div class="review-card__image">
-                    <img src="#" width="250" height="169" alt="Фотография клиента">
+                    <picture>
+                      <source width="258" height="253" type="image/webp" media="(min-width: 1440px)" srcset="img/client-3-desktop@1x.webp, img/client-3-desktop@2x.webp 2x">
+                      <source width="186" height="237" type="image/webp" media="(min-width: 768px)" srcset="img/client-3-tablet@1x.webp, img/client-3-tablet@2x.webp 2x">
+                      <source width="250" height="169" type="image/webp" srcset="img/client-3-mobile@1x.webp, img/client-3-mobile@2x.webp 2x">
+                      <source width="258" height="253" type="image/jpeg" media="(min-width: 1440px)" srcset="img/client-3-desktop@1x.jpg, img/client-3-desktop@2x.jpg 2x">
+                      <source width="186" height="237" type="image/jpeg" media="(min-width: 768px)" srcset="img/client-3-tablet@1x.jpg, img/client-3-tablet@2x.jpg 2x">
+                      <img src="img/client-3-mobile@1x.jpg" srcset="img/client-3-mobile@2x.jpg 2x" width="250" height="169" alt="Фотография клиента.">
+                    </picture>
                   </div>
                   <div class="review-card__text">
                     <div class="review-card__text-content">
-                      <blockquote>Ранее не ходила на такие длинные дистанции. В первый день прошли около 30 км, физически я устала на 18 км, поэтому не была уверена, пройду ли до конца. Но я справилась. Второй день прошёл легче, чем ожидала, видимо организм уже привык. Спасибо ребятам, инструкторам за помощь и поддержку! Я была рада быть в такой компании.</blockquote>
+                      <p>Ранее не ходила на такие длинные дистанции. В первый день прошли около 30 км, физически я устала на 18 км, поэтому не была уверена, пройду ли до конца. Но я справилась. Второй день прошёл легче, чем ожидала, видимо организм уже привык. Спасибо ребятам, инструкторам за помощь и поддержку! Я была рада быть в такой компании.</p>
                     </div>
-                    <h3 class="review-card__title">Евгения Баженова</h3>
+                    <cite class="review-card__name">Евгения Баженова</cite>
                     <p class="review-card__about">23 года, Кострома</p>
                   </div>
-                </article>
+                </blockquote>
               </div>
               <div class="slider__slide swiper-slide">
-                <article class="review-card">
+                <blockquote class="review-card">
                   <div class="review-card__image">
-                    <img src="#" width="250" height="169" alt="Фотография клиента">
+                    <picture>
+                      <source width="258" height="253" type="image/webp" media="(min-width: 1440px)" srcset="img/client-4-desktop@1x.webp, img/client-4-desktop@2x.webp 2x">
+                      <source width="186" height="237" type="image/webp" media="(min-width: 768px)" srcset="img/client-4-tablet@1x.webp, img/client-4-tablet@2x.webp 2x">
+                      <source width="250" height="169" type="image/webp" srcset="img/client-4-mobile@1x.webp, img/client-4-mobile@2x.webp 2x">
+                      <source width="258" height="253" type="image/jpeg" media="(min-width: 1440px)" srcset="img/client-4-desktop@1x.jpg, img/client-4-desktop@2x.jpg 2x">
+                      <source width="186" height="237" type="image/jpeg" media="(min-width: 768px)" srcset="img/client-4-tablet@1x.jpg, img/client-4-tablet@2x.jpg 2x">
+                      <img src="img/client-4-mobile@1x.jpg" srcset="img/client-4-mobile@2x.jpg 2x" width="250" height="169" alt="Фотография клиента.">
+                    </picture>
                   </div>
                   <div class="review-card__text">
                     <div class="review-card__text-content">
-                      <blockquote>Это был опыт, изменивший мою жизнь! Думала, не справлюсь, но все получилось! Дух захватывает, когда наконец‑то, преодолев все трудности и препятствия, взбираешься на вершину. У нас собралась потрясающая команда. Все друг друга поддерживали, по вечерам мы сидели вместе у костра и пели песни. Обязательно повторю такое приключение!</blockquote>
+                      <p>Это был опыт, изменивший мою жизнь! Думала, не справлюсь, но все получилось! Дух захватывает, когда наконец‑то, преодолев все трудности и препятствия, взбираешься на вершину. У нас собралась потрясающая команда. Все друг друга поддерживали, по вечерам мы сидели вместе у костра и пели песни. Обязательно повторю такое приключение!</p>
                     </div>
-                    <h3 class="review-card__title">Елена Пирогова</h3>
+                    <cite class="review-card__name">Елена Пирогова</cite>
                     <p class="review-card__about">37 лет, Тюмень</p>
                   </div>
                 </article>
@@ -559,7 +673,7 @@
                 <div class="features__icon">
                   <svg width="24" height="24" viewBox="0 0 24 24" role="img" aria-labelledby="expertise">
                     <title id="expertise">Экспертиза и знания</title>
-                    <use href="/__spritemap#sprite-expertise-icon"></use>
+                    <use href="/__spritemap#sprite-crown-icon"></use>
                   </svg>
                 </div>
                 <div class="features__text-content">
@@ -571,7 +685,7 @@
                 <div class="features__icon">
                   <svg width="24" height="24" viewBox="0 0 24 24" role="img" aria-labelledby="equipment">
                     <title id="equipment">Оборудование и снаряжение</title>
-                    <use href="/__spritemap#sprite-equipment-icon"></use>
+                    <use href="/__spritemap#sprite-boots-icon"></use>
                   </svg>
                 </div>
                 <div class="features__text-content">
@@ -622,21 +736,56 @@
           <div class="gallery__list slider slider--gallery swiper">
             <div class="gallery__list-wrapper slider__wrapper swiper-wrapper">
               <div class="gallery__item slider__slide swiper-slide">
-                <img src="#" width="158" height="266" alt="Путешествинник стоит спиной на фоне гор и неба.">
+                <picture>
+                  <source width="284" height="463" type="image/webp" media="(min-width: 1440px)" srcset="img/gallery-1-desktop@1x.webp, img/gallery-1-desktop@2x.webp 2x">
+                  <source width="253" height="418" type="image/webp" media="(min-width: 768px)" srcset="img/gallery-1-tablet@1x.webp, img/gallery-1-tablet@2x.webp 2x">
+                  <source width="158" height="266" type="image/webp" srcset="img/gallery-1-mobile@1x.webp, img/gallery-1-mobile@2x.webp 2x">
+                  <source width="284" height="463" type="image/jpeg" media="(min-width: 1440px)" srcset="img/gallery-1-desktop@1x.jpg, img/gallery-1-desktop@2x.jpg 2x">
+                  <source width="253" height="418" type="image/jpeg" media="(min-width: 768px)" srcset="img/gallery-1-tablet@1x.jpg, img/gallery-1-tablet@2x.jpg 2x">
+                  <img src="img/gallery-1-mobile@1x.jpg" srcset="img/gallery-1-mobile@2x.jpg 2x" width="158" height="266" alt="Путешествинник стоит спиной на фоне гор и неба.">
+                </picture>
               </div>
               <div class="gallery__item slider__slide swiper-slide">
-                <img src="#" width="157" height="135" alt="Группа туристов на привале вокруг костра.">
-                <img src="#" width="157" height="135" alt="Рука с компасом на фоне гор.">
+                <picture>
+                  <source width="284" height="233" type="image/webp" media="(min-width: 1440px)" srcset="img/gallery-2-desktop@1x.webp, img/gallery-2-desktop@2x.webp 2x">
+                  <source width="252" height="210" type="image/webp" media="(min-width: 768px)" srcset="img/gallery-2-tablet@1x.webp, img/gallery-2-tablet@2x.webp 2x">
+                  <source width="157" height="135" type="image/webp" srcset="img/gallery-2-mobile@1x.webp, img/gallery-2-mobile@2x.webp 2x">
+                  <source width="284" height="233" type="image/jpeg" media="(min-width: 1440px)" srcset="img/gallery-2-desktop@1x.jpg, img/gallery-2-desktop@2x.jpg 2x">
+                  <source width="252" height="210" type="image/jpeg" media="(min-width: 768px)" srcset="img/gallery-2-tablet@1x.jpg, img/gallery-2-tablet@2x.jpg 2x">
+                  <img src="img/gallery-2-mobile@1x.jpg" srcset="img/gallery-2-mobile@2x.jpg 2x" width="157" height="135" alt="Группа туристов на привале вокруг костра.">
+                </picture>
+                <picture>
+                  <source width="284" height="233" type="image/webp" media="(min-width: 1440px)" srcset="img/gallery-3-desktop@1x.webp, img/gallery-3-desktop@2x.webp 2x">
+                  <source width="252" height="210" type="image/webp" media="(min-width: 768px)" srcset="img/gallery-3-tablet@1x.webp, img/gallery-3-tablet@2x.webp 2x">
+                  <source width="157" height="135" type="image/webp" srcset="img/gallery-3-mobile@1x.webp, img/gallery-3-mobile@2x.webp 2x">
+                  <source width="284" height="233" type="image/jpeg" media="(min-width: 1440px)" srcset="img/gallery-3-desktop@1x.jpg, img/gallery-3-desktop@2x.jpg 2x">
+                  <source width="252" height="210" type="image/jpeg" media="(min-width: 768px)" srcset="img/gallery-3-tablet@1x.jpg, img/gallery-3-tablet@2x.jpg 2x">
+                  <img src="img/gallery-3-mobile@1x.jpg" srcset="img/gallery-3-mobile@2x.jpg 2x" width="157" height="135" alt="Рука с компасом на фоне гор.">
+                </picture>
               </div>
               <div class="gallery__item slider__slide swiper-slide">
-                <img src="#" width="158" height="266" alt="Туристы поднимаются в гору держась за веревку.">
+                <picture>
+                  <source width="284" height="463" type="image/webp" media="(min-width: 1440px)" srcset="img/gallery-4-desktop@1x.webp, img/gallery-4-desktop@2x.webp 2x">
+                  <source width="158" height="266" type="image/webp" srcset="img/gallery-4-tablet@1x.webp, img/gallery-4-tablet@2x.webp 2x">
+                  <source width="284" height="463" type="image/jpeg" media="(min-width: 1440px)" srcset="img/gallery-4-desktop@1x.jpg, img/gallery-4-desktop@2x.jpg 2x">
+                  <img src="img/gallery-4-tablet@1x.jpg" srcset="img/gallery-4-tablet@2x.jpg 2x" width="158" height="266" alt="Туристы поднимаются в гору держась за веревку.">
+                </picture>
               </div>
               <div class="gallery__item slider__slide swiper-slide">
-                <img src="#" width="157" height="135" alt="Туристы идут по горному льду.">
-                <img src="#" width="157" height="135" alt="Туристическая палатка на фоне звездного неба.">
+                <picture>
+                  <source width="157" height="135" type="image/webp" srcset="img/gallery-5-desktop@1x.webp, img/gallery-5-desktop@2x.webp 2x">
+                  <img src="img/gallery-5-desktop@1x.jpg" srcset="img/gallery-5-desktop@2x.jpg 2x" width="157" height="135" alt="Туристы идут по горному льду.">
+                </picture>
+                <picture>
+                  <source width="157" height="135" type="image/webp" srcset="img/gallery-6-desktop@1x.webp, img/gallery-6-desktop@2x.webp 2x">
+                  <img src="img/gallery-6-desktop@1x.jpg" srcset="img/gallery-6-mobile@2x.jpg 2x" width="157" height="135" alt="Туристическая палатка на фоне звездного неба.">
+                </picture>
               </div>
               <div class="gallery__item slider__slide swiper-slide">
-                <img src="#" width="158" height="266" alt="Два туриста разводят костер.">
+                <picture>
+                  <source width="158" height="266" type="image/webp" srcset="img/gallery-7-desktop@1x.webp, img/gallery-7-desktop@2x.webp 2x">
+                  <img src="img/gallery-7-desktop@1x.jpg" srcset="img/gallery-7-desktop@2x.jpg 2x" width="158" height="266" alt="Два туриста разводят костер.">
+                </picture>
               </div>
             </div>
             <div class="slider__navigation">
@@ -715,7 +864,14 @@
             </li>
           </ul>
           <div class="contacts__map">
-            <img src="#" width="320" height="343" alt="Карта с отметкой на адресе: г. Москва, пр-т Мира, д. 14, офис 101">
+            <picture>
+              <source width="600" height="324" type="image/webp" media="(min-width: 1440px)" srcset="img/map-desktop@1x.webp, img/map-desktop@2x.webp 2x">
+              <source width="768" height="340" type="image/webp" media="(min-width: 768px)" srcset="img/map-tablet@1x.webp, img/map-tablet@2x.webp 2x">
+              <source width="320" height="343" type="image/webp" srcset="img/map-mobile@1x.webp, img/map-mobile@2x.webp 2x">
+              <source width="600" height="324" type="image/png" media="(min-width: 1440px)" srcset="img/map-desktop@1x.png, img/map-desktop@2x.png 2x">
+              <source width="768" height="340" type="image/png" media="(min-width: 768px)" srcset="img/map-tablet@1x.png, img/map-tablet@2x.png 2x">
+              <img src="img/map-mobile@1x.png" srcset="img/map-mobile@2x.png 2x" width="320" height="343" alt="Карта с отметкой на адресе: г. Москва, пр-т Мира, д. 14, офис 101.">
+            </picture>
           </div>
         </div>
       </section>
