@@ -1,4 +1,23 @@
-// Vendor
-// ---------------------------------
-
+// VENDOR
 @import "vendor/normalize";
+
+// GLOBAL
+@import "common/fonts";
+@import "common/variables";
+@import "common/global";
+@import "common/container";
+@import "common/visually-hidden";
+@import "common/mixins";
+
+// BLOCKS
+@import "blocks/page";
+@import "blocks/logo";
+@import "blocks/burger";
+@import "blocks/phone";
+@import "blocks/button";
+@import "blocks/main-nav";
+@import "blocks/site-list";
+@import "blocks/slider";
+@import "blocks/promo-tour";
+@import "blocks/main-header";
+@import "blocks/hero";

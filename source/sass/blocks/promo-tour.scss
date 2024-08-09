@@ -1,0 +1,56 @@
+.promo-tour {
+  min-height: 568px;
+  color: $base-white;
+  background-color: $hero-bg;
+
+  img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: block;
+    max-width: none;
+  }
+}
+
+.promo-tour__wrapper {
+  position: relative;
+}
+
+.promo-tour__info {
+  position: relative;
+  max-width: 100%;
+  padding: 114.5px 0 50px;
+  text-align: center;
+}
+
+.promo-tour__text-content {
+  font-size: 15px;
+
+  h2 {
+    margin: 0;
+    margin-bottom: 15px;
+    font-size: 26px;
+    line-height: 26px;
+    font-weight: 800;
+  }
+
+  p {
+    margin-top: 8px;
+    margin-bottom: 8px;
+  }
+}
+
+.promo-tour__button {
+  width: 180px;
+  margin-top: 60px;
+}
+
+.promo-tour__characteristics {
+  display: none;
+}
+
+@media (max-width: $mobile-width-only) {
+  .promo-tour__photos {
+    display: none;
+  }
+}

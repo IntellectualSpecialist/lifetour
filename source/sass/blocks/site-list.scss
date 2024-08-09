@@ -1,0 +1,31 @@
+.site-list {
+  @include list-reset;
+
+  width: 320px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.site-list__item {
+  margin-bottom: 22px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.site-list__link {
+  font-size: 14px;
+  line-height: 14px;
+  font-weight: 700;
+  letter-spacing: 4%;
+  text-transform: uppercase;
+  color: $base-white;
+  text-decoration: none;
+}
+
+.site-list--dark {
+  .site-list__link {
+    color: $primary-color;
+  }
+}

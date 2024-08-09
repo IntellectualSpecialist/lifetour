@@ -1,0 +1,17 @@
+.logo {
+  img {
+    display: block;
+    width: 142px;
+    height: 42.5px;
+    object-fit: cover;
+  }
+
+  &:hover,
+  &:focus-visible {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}

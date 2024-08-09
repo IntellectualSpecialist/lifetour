@@ -6,171 +6,188 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lifetour</title>
     <meta name="description" content="Занимаемся туризмом — походы, поездки, восхождения. Подарим вам незабываемые впечатления от похода в горы. Находимся в г. Москве.">
+    <link rel="preload" href="fonts/montserrat-bold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/montserrat-medium.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/montserrat-regular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/montserrat-light.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/montserrat-semibold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/montserrat-extrabold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon.png">
+    <link rel="icon" href="favicons/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="favicons/180.png">
+    <link rel="manifest" href="manifest.webmanifest">
     <link rel="stylesheet" href="sass/style.scss">
   </head>
 
   <body class="page__body">
     <header class="main-header" data-test="header">
       <div class="main-header__wrapper container">
-        <a class="main-header__burger" href="#">
+        <a class="main-header__burger burger" href="#">
           <span class="visually-hidden">Меню</span>
-          <span class="main-header__burger-icon"></span>
+          <span class="burger__icon"></span>
         </a>
-        <a class="main-header__logo logo" href="#">
-          <img src="/__spritemap#sprite-logo-view" width="142" height="42" alt="Логотип «Lifetour». Перейти на главную страницу.">
-        </a>
-        <nav class="main-header__nav main-nav">
-          <ul class="main-nav__list site-list">
-            <li class="site-list__item">
-              <a class="site-list__link" href="#tours">Туры</a>
-            </li>
-            <li class="site-list__item">
-              <a class="site-list__link" href="#training">Обучение</a>
-            </li>
-            <li class="site-list__item">
-              <a class="site-list__link" href="#about">О нас</a>
-            </li>
-            <li class="site-list__item">
-              <a class="site-list__link" href="#reviews">Отзывы</a>
-            </li>
-            <li class="site-list__item">
-              <a class="site-list__link" href="#gallery">Фотографии</a>
-            </li>
-            <li class="site-list__item">
-              <a class="site-list__link" href="#contacts">Контакты</a>
-            </li>
-          </ul>
-        </nav>
-        <a class="main-header__phone phone" href="tel:+78000000000">8 800 000-00-00</a>
+        <div class="main-header__container">
+          <a class="main-header__logo logo" href="#">
+            <img src="/__spritemap#sprite-logo-view" width="142" height="42" alt="Логотип «Lifetour». Перейти на главную страницу.">
+          </a>
+          <nav class="main-header__nav main-nav">
+            <ul class="main-nav__list site-list">
+              <li class="site-list__item">
+                <a class="site-list__link" href="#tours">Туры</a>
+              </li>
+              <li class="site-list__item">
+                <a class="site-list__link" href="#training">Обучение</a>
+              </li>
+              <li class="site-list__item">
+                <a class="site-list__link" href="#about">О нас</a>
+              </li>
+              <li class="site-list__item">
+                <a class="site-list__link" href="#reviews">Отзывы</a>
+              </li>
+              <li class="site-list__item">
+                <a class="site-list__link" href="#gallery">Фотографии</a>
+              </li>
+              <li class="site-list__item">
+                <a class="site-list__link" href="#contacts">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+          <a class="main-header__phone phone" href="tel:+78000000000">8 800 000-00-00</a>
+        </div>
       </div>
     </header>
     <main>
       <h1 class="visually-hidden">Lifetour</h1>
       <section class="hero" data-test="hero">
-        <div class="hero__wrapper container">
-          <div class="hero__slider slider slider--promo swiper">
-            <div class="slider__wrapper swiper-wrapper">
-              <div class="slider__slide swiper-slide">
-                <picture>
-                  <source width="1440" height="800" type="image/webp" media="(min-width: 1440px)" srcset="img/mountain-1-desktop@1x.webp, img/mountain-1-desktop@2x.webp 2x">
-                  <source width="768" height="1034" type="image/webp" media="(min-width: 768px)" srcset="img/mountain-1-tablet@1x.webp, img/mountain-1-tablet@2x.webp 2x">
-                  <source width="320" height="560" type="image/webp" srcset="img/mountain-1-mobile@1x.webp, img/mountain-1-mobile@2x.webp 2x">
-                  <source width="1440" height="800" type="image/jpeg" media="(min-width: 1440px)" srcset="img/mountain-1-desktop@1x.jpg, img/mountain-1-desktop@2x.jpg 2x">
-                  <source width="768" height="1034" type="image/jpeg" media="(min-width: 768px)" srcset="img/mountain-1-tablet@1x.jpg, img/mountain-1-tablet@2x.jpg 2x">
-                  <img src="img/mountain-1-mobile@1x.jpg" srcset="img/mountain-1-mobile@2x.jpg 2x" width="320" height="568" alt="Кавказские горы.">
-                </picture>
-                <div class="slider__info">
-                  <div class="slider__text-content">
-                    <h2>Захватывающие вершины Кавказа</h2>
-                    <p>В сопровождении опытных гидов вы пройдёте через потрясающие ландшафты и совершите восход на вершину горы Чегет.</p>
-                  </div>
-                  <a class="slider__button button" href="#">Смотреть тур</a>
-                  <ul class="slider__characteristics">
-                    <li class="slider__characteristic">
-                      <svg width="12" height="12" viewBox="0 0 12 12" role="img" aria-label="Продолжительность" focusable="false">
-                        <use href="/__spritemap#sprite-moon-icon"></use>
-                      </svg>
-                      <span>6 дней/5 ночей</span>
-                    </li>
-                    <li class="slider__characteristic">
-                      <svg width="12" height="12" viewBox="0 0 12 12" role="img" aria-label="Сложность" focusable="false">
-                        <use href="/__spritemap#sprite-complexity-icon"></use>
-                      </svg>
-                      <span>Высокая сложность</span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div class="slider__slide swiper-slide">
-                <div class="slider__slide swiper-slide">
+        <div class="hero__slider slider slider--promo swiper">
+          <div class="slider__wrapper swiper-wrapper">
+            <div class="slider__slide swiper-slide">
+              <article class="promo-tour">
+                <div class="promo-tour__wrapper container">
                   <picture>
-                    <source width="1440" height="800" type="image/webp" media="(min-width: 1440px)" srcset="img/mountain-2-desktop@1x.webp, img/mountain-2-desktop@2x.webp 2x">
-                    <source width="768" height="1034" type="image/webp" media="(min-width: 768px)" srcset="img/mountain-2-tablet@1x.webp, img/mountain-2-tablet@2x.webp 2x">
-                    <source width="320" height="560" type="image/webp" srcset="img/mountain-2-mobile@1x.webp, img/mountain-2-mobile@2x.webp 2x">
-                    <source width="1440" height="800" type="image/jpeg" media="(min-width: 1440px)" srcset="img/mountain-2-desktop@1x.jpg, img/mountain-2-desktop@2x.jpg 2x">
-                    <source width="768" height="1034" type="image/jpeg" media="(min-width: 768px)" srcset="img/mountain-2-tablet@1x.jpg, img/mountain-2-tablet@2x.jpg 2x">
-                    <img src="img/mountain-2-mobile@1x.jpg" srcset="img/mountain-2-mobile@2x.jpg 2x" width="320" height="568" alt="Горы Камчатки.">
+                    <source width="1440" height="800" type="image/webp" media="(min-width: 1440px)" srcset="img/mountain-1-desktop@1x.webp, img/mountain-1-desktop@2x.webp 2x">
+                    <source width="768" height="1034" type="image/webp" media="(min-width: 768px)" srcset="img/mountain-1-tablet@1x.webp, img/mountain-1-tablet@2x.webp 2x">
+                    <source width="320" height="568" type="image/webp" srcset="img/mountain-1-mobile@1x.webp, img/mountain-1-mobile@2x.webp 2x">
+                    <source width="1440" height="800" type="image/jpeg" media="(min-width: 1440px)" srcset="img/mountain-1-desktop@1x.jpg, img/mountain-1-desktop@2x.jpg 2x">
+                    <source width="768" height="1034" type="image/jpeg" media="(min-width: 768px)" srcset="img/mountain-1-tablet@1x.jpg, img/mountain-1-tablet@2x.jpg 2x">
+                    <img src="img/mountain-1-mobile@1x.jpg" srcset="img/mountain-1-mobile@2x.jpg 2x" width="320" height="568" alt="Кавказские горы.">
                   </picture>
-                  <div class="slider__info">
-                    <div class="slider__text-content">
-                      <h2>Невероятная природа Камчатки</h2>
-                      <p>Незабываемое приключение, во время которого вы отправитесь в путешествие по одному из самых нетронутых уголков дикой природы в мире.</p>
+                  <div class="promo-tour__info">
+                    <div class="promo-tour__text-content">
+                      <h2>Захватывающие вершины Кавказа</h2>
+                      <p>В сопровождении опытных гидов вы пройдёте через потрясающие ландшафты и совершите восход на вершину горы Чегет.</p>
                     </div>
-                    <a class="slider__button button" href="#">Смотреть тур</a>
-                    <ul class="slider__characteristics">
-                      <li class="slider__characteristic">
+                    <a class="promo-tour__button button" href="#">Смотреть тур</a>
+                    <ul class="promo-tour__characteristics">
+                      <li class="promo-tour__characteristic">
                         <svg width="12" height="12" viewBox="0 0 12 12" role="img" aria-label="Продолжительность" focusable="false">
                           <use href="/__spritemap#sprite-moon-icon"></use>
                         </svg>
-                        <span>9 дней/10 ночей</span>
+                        <span>6 дней/5 ночей</span>
                       </li>
-                      <li class="slider__characteristic">
+                      <li class="promo-tour__characteristic">
                         <svg width="12" height="12" viewBox="0 0 12 12" role="img" aria-label="Сложность" focusable="false">
                           <use href="/__spritemap#sprite-complexity-icon"></use>
                         </svg>
-                        <span>Средняя сложность</span>
+                        <span>Высокая сложность</span>
                       </li>
                     </ul>
-                    <div class="slider__photos">
-                      <picture>
-                        <source width="410" height="459" type="image/webp" media="(min-width: 1440px)" srcset="img/photo-cards-desktop@1x.webp, img/photo-cards-desktop@2x.webp 2x">
-                        <source width="442" height="365" type="image/webp" media="(min-width: 768px)" srcset="img/photo-cards-tablet@1x.webp, img/photo-cards-tablet@2x.webp 2x">
-                        <source width="410" height="459" type="image/png" media="(min-width: 1440px)" srcset="img/photo-cards-desktop@1x.png, img/photo-cards-desktop@2x.png 2x">
-                        <img src="img/photo-cards-tablet@1x.png" srcset="img/photo-cards-tablet@2x.png 2x" width="442" height="365" loading="lazy" alt="Две полароид-фотографии: на первой карьер, на второй путешествинница в горах.">
-                      </picture>
+                  </div>
+                </div>
+              </article>
+            </div>
+            <div class="slider__slide swiper-slide">
+              <div class="slider__slide swiper-slide">
+                <article class="promo-tour">
+                  <div class="promo-tour__wrapper container">
+                    <picture>
+                      <source width="1440" height="800" type="image/webp" media="(min-width: 1440px)" srcset="img/mountain-2-desktop@1x.webp, img/mountain-2-desktop@2x.webp 2x">
+                      <source width="768" height="1034" type="image/webp" media="(min-width: 768px)" srcset="img/mountain-2-tablet@1x.webp, img/mountain-2-tablet@2x.webp 2x">
+                      <source width="320" height="568" type="image/webp" srcset="img/mountain-2-mobile@1x.webp, img/mountain-2-mobile@2x.webp 2x">
+                      <source width="1440" height="800" type="image/jpeg" media="(min-width: 1440px)" srcset="img/mountain-2-desktop@1x.jpg, img/mountain-2-desktop@2x.jpg 2x">
+                      <source width="768" height="1034" type="image/jpeg" media="(min-width: 768px)" srcset="img/mountain-2-tablet@1x.jpg, img/mountain-2-tablet@2x.jpg 2x">
+                      <img src="img/mountain-2-mobile@1x.jpg" srcset="img/mountain-2-mobile@2x.jpg 2x" width="320" height="568" alt="Горы Камчатки.">
+                    </picture>
+                    <div class="promo-tour__info">
+                      <div class="promo-tour__text-content">
+                        <h2>Невероятная природа Камчатки</h2>
+                        <p>Незабываемое приключение, во время которого вы отправитесь в путешествие по одному из самых нетронутых уголков дикой природы в мире.</p>
+                      </div>
+                      <a class="promo-tour__button button" href="#">Смотреть тур</a>
+                      <ul class="promo-tour__characteristics">
+                        <li class="promo-tour__characteristic">
+                          <svg width="12" height="12" viewBox="0 0 12 12" role="img" aria-label="Продолжительность" focusable="false">
+                            <use href="/__spritemap#sprite-moon-icon"></use>
+                          </svg>
+                          <span>9 дней/10 ночей</span>
+                        </li>
+                        <li class="promo-tour__characteristic">
+                          <svg width="12" height="12" viewBox="0 0 12 12" role="img" aria-label="Сложность" focusable="false">
+                            <use href="/__spritemap#sprite-complexity-icon"></use>
+                          </svg>
+                          <span>Средняя сложность</span>
+                        </li>
+                      </ul>
+                      <div class="promo-tour__photos">
+                        <picture>
+                          <source width="410" height="459" type="image/webp" media="(min-width: 1440px)" srcset="img/photo-cards-desktop@1x.webp, img/photo-cards-desktop@2x.webp 2x">
+                          <source width="442" height="365" type="image/webp" media="(min-width: 768px)" srcset="img/photo-cards-tablet@1x.webp, img/photo-cards-tablet@2x.webp 2x">
+                          <source width="410" height="459" type="image/png" media="(min-width: 1440px)" srcset="img/photo-cards-desktop@1x.png, img/photo-cards-desktop@2x.png 2x">
+                          <img src="img/photo-cards-tablet@1x.png" srcset="img/photo-cards-tablet@2x.png 2x" width="442" height="365" loading="lazy" alt="Две полароид-фотографии: на первой карьер, на второй путешествинница в горах.">
+                        </picture>
+                      </div>
                     </div>
                   </div>
-                </div>
-              </div>
-              <div class="slider__slide swiper-slide">
-                <picture>
-                  <source width="1440" height="800" type="image/webp" media="(min-width: 1440px)" srcset="img/mountain-3-desktop@1x.webp, img/mountain-3-desktop@2x.webp 2x">
-                  <source width="768" height="1034" type="image/webp" media="(min-width: 768px)" srcset="img/mountain-3-tablet@1x.webp, img/mountain-3-tablet@2x.webp 2x">
-                  <source width="320" height="560" type="image/webp" srcset="img/mountain-3-mobile@1x.webp, img/mountain-3-mobile@2x.webp 2x">
-                  <source width="1440" height="800" type="image/jpeg" media="(min-width: 1440px)" srcset="img/mountain-3-desktop@1x.jpg, img/mountain-3-desktop@2x.jpg 2x">
-                  <source width="768" height="1034" type="image/jpeg" media="(min-width: 768px)" srcset="img/mountain-3-tablet@1x.jpg, img/mountain-3-tablet@2x.jpg 2x">
-                  <img src="img/mountain-3-mobile@1x.jpg" srcset="img/mountain-3-mobile@2x.jpg 2x" width="320" height="568" alt="Горы Алтая.">
-                </picture>
-                <div class="slider__info">
-                  <div class="slider__text-content">
-                    <h2>Магические пейзажи Алтайского Края</h2>
-                    <p>Алтайский трекинг-тур — это захватывающее приключение с посещением магических и захватывающих дух ландшафтов Алтайских гор.</p>
-                  </div>
-                  <a class="slider__button button" href="#">Смотреть тур</a>
-                  <ul class="slider__characteristics">
-                    <li class="slider__characteristic">
-                      <svg width="12" height="12" viewBox="0 0 12 12" role="img" aria-label="Продолжительность" focusable="false">
-                        <use href="/__spritemap#sprite-moon-icon"></use>
-                      </svg>
-                      <span>8 дней/7 ночей</span>
-                    </li>
-                    <li class="slider__characteristic">
-                      <svg width="12" height="12" viewBox="0 0 12 12" role="img" aria-label="Сложность" focusable="false">
-                        <use href="/__spritemap#sprite-complexity-icon"></use>
-                      </svg>
-                      <span>Лёгкая сложность</span>
-                    </li>
-                  </ul>
-                </div>
+                </article>
               </div>
             </div>
-            <ul class="slider__pagination swiper-pagination">
-              <li class="slider__pagination-item">
-                <button class="slider__pagination-button" type="button">
-                  <span class="visually-hidden">1 слайд</span>
-                </button>
-              </li>
-              <li class="slider__pagination-item">
-                <button class="slider__pagination-button" type="button">
-                  <span class="visually-hidden">2 слайд</span>
-                </button>
-              </li>
-              <li class="slider__pagination-item">
-                <button class="slider__pagination-button" type="button">
-                  <span class="visually-hidden">3 слайд</span>
-                </button>
-              </li>
-            </ul>
+            <div class="slider__slide swiper-slide">
+              <article class="promo-tour">
+                <div class="promo-tour__wrapper container">
+                  <picture>
+                    <source width="1440" height="800" type="image/webp" media="(min-width: 1440px)" srcset="img/mountain-3-desktop@1x.webp, img/mountain-3-desktop@2x.webp 2x">
+                    <source width="768" height="1034" type="image/webp" media="(min-width: 768px)" srcset="img/mountain-3-tablet@1x.webp, img/mountain-3-tablet@2x.webp 2x">
+                    <source width="320" height="568" type="image/webp" srcset="img/mountain-3-mobile@1x.webp, img/mountain-3-mobile@2x.webp 2x">
+                    <source width="1440" height="800" type="image/jpeg" media="(min-width: 1440px)" srcset="img/mountain-3-desktop@1x.jpg, img/mountain-3-desktop@2x.jpg 2x">
+                    <source width="768" height="1034" type="image/jpeg" media="(min-width: 768px)" srcset="img/mountain-3-tablet@1x.jpg, img/mountain-3-tablet@2x.jpg 2x">
+                    <img src="img/mountain-3-mobile@1x.jpg" srcset="img/mountain-3-mobile@2x.jpg 2x" width="320" height="568" alt="Горы Алтая.">
+                  </picture>
+                  <div class="promo-tour__info">
+                    <div class="promo-tour__text-content">
+                      <h2>Магические пейзажи Алтайского Края</h2>
+                      <p>Алтайский трекинг-тур — это захватывающее приключение с посещением магических и захватывающих дух ландшафтов Алтайских гор.</p>
+                    </div>
+                    <a class="promo-tour__button button" href="#">Смотреть тур</a>
+                    <ul class="promo-tour__characteristics">
+                      <li class="promo-tour__characteristic">
+                        <svg width="12" height="12" viewBox="0 0 12 12" role="img" aria-label="Продолжительность" focusable="false">
+                          <use href="/__spritemap#sprite-moon-icon"></use>
+                        </svg>
+                        <span>8 дней/7 ночей</span>
+                      </li>
+                      <li class="promo-tour__characteristic">
+                        <svg width="12" height="12" viewBox="0 0 12 12" role="img" aria-label="Сложность" focusable="false">
+                          <use href="/__spritemap#sprite-complexity-icon"></use>
+                        </svg>
+                        <span>Лёгкая сложность</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+          <div class="slider__pagination swiper-pagination">
+            <button class="slider__pagination-button" type="button">
+              <span class="visually-hidden">1 слайд</span>
+            </button>
+            <button class="slider__pagination-button" type="button">
+              <span class="visually-hidden">2 слайд</span>
+            </button>
+            <button class="slider__pagination-button" type="button">
+              <span class="visually-hidden">3 слайд</span>
+            </button>
           </div>
         </div>
       </section>
@@ -881,7 +898,7 @@
             <a class="sub-footer__logo logo logo--dark" href="#">
               <img src="/__spritemap#sprite-logo-dark-view" width="142" height="42" alt="Логотип «Lifetour». Перейти на главную страницу.">
             </a>
-            <div class="sub-footer__nav main-nav">
+            <div class="sub-footer__nav main-nav main-nav--light">
               <div class="main-nav__list site-list site-list--dark">
                 <div class="site-list__column">
                   <div class="site-list__item">
