@@ -1,0 +1,47 @@
+.instructor-card {
+  padding: 15px;
+  background-color: $base-white;
+  border: 1px solid $secondary-opacity;
+}
+
+.instructor-card__image {
+  margin-bottom: 15px;
+
+  img {
+    display: block;
+    width: 260px;
+    height: 200px;
+    object-fit: cover;
+  }
+}
+
+.instructor-card__header {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 20px;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 15px;
+}
+
+.instructor-card__social {
+  max-width: 95px;
+}
+
+.instructor-card__title-wrapper {
+  width: 143px;
+
+  * {
+    margin: 0;
+    line-height: 16px;
+  }
+}
+
+.instructor-card__text-content {
+  font-size: 12px;
+  line-height: 16px;
+
+  * {
+    margin: 0;
+  }
+}

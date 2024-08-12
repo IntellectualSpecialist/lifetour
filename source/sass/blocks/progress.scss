@@ -1,0 +1,67 @@
+.progress__title {
+  margin-bottom: 25px;
+}
+
+.progress__list {
+  @include list-reset;
+
+  padding-left: 29px;
+  padding-right: 26px;
+}
+
+.progress__item {
+  position: relative;
+  margin-bottom: 25px;
+  padding-left: 34px;
+  font-size: 12px;
+  line-height: 18px;
+  background-size: 25px 25px;
+  background-repeat: no-repeat;
+  background-position: top left;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: -23px;
+    top: 18px;
+    width: 2px;
+    height: 61px;
+    background-color: $secondary-color;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -29px;
+    width: 14px;
+    height: 14px;
+    background-color: $secondary-color;
+    transform: translateY(-50%);
+    border-radius: 50%;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+
+    &::before {
+      display: none;
+    }
+  }
+
+  &--movement {
+    background-image: url("../../__spritemap#sprite-map-icon-view");
+  }
+
+  &--equipment {
+    background-image: url("../../__spritemap#sprite-boots-icon-view");
+  }
+
+  &--ecology {
+    background-image: url("../../__spritemap#sprite-pine-tree-icon-view");
+  }
+
+  &--mountain {
+    background-image: url("../../__spritemap#sprite-mountain-icon-view");
+  }
+}

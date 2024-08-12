@@ -13,6 +13,15 @@
   line-height: 20px;
   font-weight: 400;
   color: $primary-color;
+  background-image:
+    image-set(
+      url("../../img/clouds-1-mobile@1x.webp") type("image/webp") 1x,
+      url("../../img/clouds-1-mobile@2x.webp") type("image/webp") 2x,
+      url("../../img/clouds-1-mobile@1x.png") type("image/png") 1x,
+      url("../../img/clouds-1-mobile@2x.png") type("image/png") 2x
+    );
+  background-repeat: no-repeat;
+  background-position: top 678px right;
 
   main {
     flex-grow: 1;
@@ -26,6 +35,7 @@
   &--modal-open::before {
     content: "";
     position: absolute;
+    z-index: 2;
     top: 0;
     left: 0;
     width: 100%;

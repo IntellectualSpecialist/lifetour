@@ -1,0 +1,96 @@
+.link {
+  display: block;
+  width: fit-content;
+  line-height: 14px;
+  font-weight: 600;
+  text-align: right;
+  color: $primary-color;
+  text-decoration: none;
+
+  &:hover {
+    color: $secondary-opacity;
+  }
+
+  &:focus-visible {
+    color: $secondary-color;
+  }
+
+  &:active {
+    color: $dark-blue;
+  }
+}
+
+.link--arrow {
+  position: relative;
+  padding: 10px 28px 10px 10px;
+  font-weight: 700;
+  letter-spacing: 4%;
+  text-transform: uppercase;
+
+  &::before {
+    content: "";
+    position: absolute;
+    right: 9px;
+    top: 50%;
+    width: 9px;
+    height: 14px;
+    mask-image: url("../../__spritemap#sprite-arrow-link-view");
+    background-color: $primary-color;
+    transform: translateY(-50%);
+  }
+
+  &:hover {
+    &::before {
+      background-color: $secondary-opacity;
+    }
+  }
+
+  &:focus-visible {
+    &::before {
+      background-color: $secondary-color;
+    }
+  }
+
+  &:active {
+    &::before {
+      background-color: $dark-blue;
+    }
+  }
+}
+
+.link--light {
+  color: $base-white;
+
+  &::before {
+    background-color: $base-white;
+  }
+
+  &:hover {
+    color: $white-opacity;
+
+    &::before {
+      background-color: $white-opacity;
+    }
+  }
+
+  &:focus-visible {
+    color: $primary-color;
+
+    &::before {
+      background-color: $primary-color;
+    }
+  }
+}
+
+.link--disabled {
+  pointer-events: none;
+  color: $base-grey;
+
+  &:focus-visible {
+    color: $base-grey;
+  }
+
+  &::before {
+    background-color: $base-grey;
+  }
+}

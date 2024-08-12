@@ -2,24 +2,39 @@
   min-height: 568px;
   color: $base-white;
   background-color: $hero-bg;
-
-  img {
-    position: absolute;
-    left: 0;
-    top: 0;
-    display: block;
-    max-width: none;
-  }
 }
 
 .promo-tour__wrapper {
   position: relative;
 }
 
+.promo-tour__picture {
+  position: absolute;
+  left: 0;
+  top: 0;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: $bg-gradient-primary;
+  }
+
+  img {
+    display: block;
+    max-width: none;
+    width: 320px;
+    height: 568px;
+  }
+}
+
 .promo-tour__info {
   position: relative;
   max-width: 100%;
-  padding: 114.5px 0 50px;
+  padding: 114.5px 0 70px;
   text-align: center;
 }
 
@@ -35,8 +50,8 @@
   }
 
   p {
-    margin-top: 8px;
-    margin-bottom: 8px;
+    margin-top: 10px;
+    margin-bottom: 10px;
   }
 }
 

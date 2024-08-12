@@ -1,0 +1,32 @@
+.contacts__wrapper {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.contacts__title {
+  margin-bottom: 12px;
+}
+
+.contacts__text-content {
+  margin-bottom: 30px;
+
+  p {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+}
+
+.contacts__list {
+  margin-bottom: 30px;
+}
+
+.contacts__map {
+  width: 320px;
+  margin-left: -15px;
+
+  img {
+    display: block;
+    width: 320px;
+    height: 343px;
+  }
+}

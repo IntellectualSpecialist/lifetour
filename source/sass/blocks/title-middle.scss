@@ -1,0 +1,43 @@
+.title-middle {
+  position: relative;
+  padding: 16px 0 17px;
+
+  &::before {
+    content: attr(data-value);
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-weight: 800;
+    font-size: 26px;
+    line-height: 26px;
+    opacity: 0.03;
+  }
+
+  * {
+    margin: 0;
+    font-size: 22px;
+    line-height: 22px;
+    font-weight: 800;
+  }
+}
+
+.title-middle--no-duplicate {
+  padding: 0;
+
+  &::before {
+    display: none;
+  }
+}
+
+.title-middle--centered {
+  text-align: center;
+
+  &::before {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.title-middle--light {
+  color: $base-white;
+}

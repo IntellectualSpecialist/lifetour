@@ -1,0 +1,69 @@
+.field {
+  position: relative;
+  display: block;
+
+  input {
+    display: block;
+    width: 100%;
+    height: 50px;
+    padding: 16px 14px;
+    font-size: 16px;
+    line-height: 16px;
+    color: rgba($primary-color, 0.5);
+    background-color: $base-white;
+    border-radius: 2px;
+    border: 1px solid transparent;
+
+    &:hover {
+      border-color: $secondary-color;
+    }
+
+    &:focus-visible {
+      border-color: $primary-color;
+    }
+
+    &:disabled {
+      border-color: $base-grey;
+      color: rgba($base-grey, 0.5);
+    }
+
+    &:user-invalid {
+      border-color: $error-color;
+    }
+  }
+
+  input::placeholder {
+    color: rgba($secondary-color, 0.5);
+  }
+
+  input:disabled::placeholder {
+    color: rgba($base-grey, 0.5);
+  }
+
+  &:has(input:focus) {
+    .field__label {
+      display: none;
+    }
+  }
+
+  &:has(input:user-valid) {
+    .field__label {
+      display: none;
+    }
+  }
+
+  &:has(input:disabled) {
+    .field__label {
+      color: rgba($base-grey, 0.5);
+      pointer-events: none;
+    }
+  }
+}
+
+.field__label {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  color: rgba($primary-color, 0.5);
+  transform: translateY(-50%);
+}

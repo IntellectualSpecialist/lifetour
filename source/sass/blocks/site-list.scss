@@ -3,11 +3,11 @@
 
   width: 320px;
   margin: 0 auto;
-  padding: 0 15px;
+  padding: 0 15px 0 10px;
 }
 
 .site-list__item {
-  margin-bottom: 22px;
+  margin-bottom: 17px;
 
   &:last-child {
     margin-bottom: 0;
@@ -15,6 +15,8 @@
 }
 
 .site-list__link {
+  position: relative;
+  padding: 3px 5px 2px;
   font-size: 14px;
   line-height: 14px;
   font-weight: 700;
@@ -22,10 +24,61 @@
   text-transform: uppercase;
   color: $base-white;
   text-decoration: none;
+  border: 1px solid transparent;
+
+  &:hover {
+    border-bottom-color: $base-white;
+  }
+
+  &:focus-visible {
+    border-color: $base-white;
+    outline: none;
+  }
+
+  &:active {
+    color: $dark-blue;
+    border-color: transparent;
+  }
+
+  &--disabled {
+    color: $base-grey;
+    pointer-events: none;
+  }
 }
 
 .site-list--dark {
+  width: auto;
+  padding: 0;
+
+  .site-list__item {
+    margin-bottom: 15px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
   .site-list__link {
+    font-weight: 400;
     color: $primary-color;
+    text-transform: none;
+
+    &:hover:not(:active) {
+      border-bottom-color: $primary-color;
+    }
+
+    &:focus-visible {
+      border-color: $primary-color;
+      outline: none;
+    }
+
+    &:active {
+      color: $secondary-color;
+    }
+  }
+
+  .site-list__link--disabled {
+    color: $base-grey;
+    pointer-events: none;
   }
 }

@@ -1,0 +1,46 @@
+.social {
+  @include list-reset;
+
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.social__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 31.84px;
+  height: 30px;
+  color: $primary-color;
+  border: 1px solid $primary-opacity-alt;
+
+  &:hover {
+    border-color: $primary-color;
+  }
+
+  &:focus-visible {
+    border-color: transparent;
+  }
+
+  &:active {
+    color: $base-white;
+    background-color: $secondary-color;
+    border-color: $secondary-color;
+  }
+
+  &--disabled {
+    border-color: $primary-color;
+    opacity: 0.3;
+    pointer-events: none;
+  }
+}
+
+.social--alternative {
+  .social__link {
+    width: 24px;
+    height: 24px;
+  }
+}

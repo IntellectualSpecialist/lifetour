@@ -1,0 +1,44 @@
+.sub-footer {
+  text-align: center;
+  border-top: 1px solid rgba($primary-color, 0.2);
+}
+
+.sub-footer__wrapper {
+  padding-top: 23px;
+  padding-bottom: 20px;
+}
+
+.sub-footer__logo {
+  margin-bottom: 23px;
+}
+
+.sub-footer__nav {
+  display: flex;
+  gap: 50px;
+  margin-bottom: 20px;
+}
+
+.sub-footer__phone {
+  display: none;
+}
+
+.sub-footer__social {
+  margin-bottom: 23px;
+}
+
+.sub-footer__privacy-policy {
+  font-size: 12px;
+  line-height: 12px;
+  font-weight: 300;
+  color: $primary-color;
+  text-decoration: none;
+
+  &:hover,
+  &:focus-visible {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
