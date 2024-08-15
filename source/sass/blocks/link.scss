@@ -24,7 +24,7 @@
   position: relative;
   padding: 10px 28px 10px 10px;
   font-weight: 700;
-  letter-spacing: 4%;
+  letter-spacing: 0.04em;
   text-transform: uppercase;
 
   &::before {
@@ -92,5 +92,12 @@
 
   &::before {
     background-color: $base-grey;
+  }
+}
+
+
+@media (min-width: $tablet-width) {
+  .link {
+    line-height: 16px;
   }
 }

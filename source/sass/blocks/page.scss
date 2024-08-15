@@ -43,3 +43,33 @@
     background-color: $primary-opacity;
   }
 }
+
+@media (min-width: $tablet-width) {
+  .page__body {
+    font-size: 16px;
+    line-height: 24px;
+    background-image:
+      image-set(
+        url("../../img/clouds-3-tablet@1x.webp") type("image/webp") 1x,
+        url("../../img/clouds-3-tablet@2x.webp") type("image/webp") 2x,
+        url("../../img/clouds-3-tablet@1x.png") type("image/png") 1x,
+        url("../../img/clouds-3-tablet@2x.png") type("image/png") 2x
+      ),
+      image-set(
+        url("../../img/clouds-2-tablet@1x.webp") type("image/webp") 1x,
+        url("../../img/clouds-2-tablet@2x.webp") type("image/webp") 2x,
+        url("../../img/clouds-2-tablet@1x.png") type("image/png") 1x,
+        url("../../img/clouds-2-tablet@2x.png") type("image/png") 2x
+      ),
+      image-set(
+        url("../../img/clouds-1-tablet@1x.webp") type("image/webp") 1x,
+        url("../../img/clouds-1-tablet@2x.webp") type("image/webp") 2x,
+        url("../../img/clouds-1-tablet@1x.png") type("image/png") 1x,
+        url("../../img/clouds-1-tablet@2x.png") type("image/png") 2x
+      );
+    background-position:
+      top 4148px center,
+      top 2365px right,
+      top 1020px right;
+  }
+}

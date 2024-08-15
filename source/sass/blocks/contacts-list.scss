@@ -15,6 +15,13 @@
 
 .contacts-list__icon {
   flex-shrink: 0;
+
+  svg,
+  img {
+    display: block;
+    width: 22px;
+    height: 22px;
+  }
 }
 
 .contacts-list__text {
@@ -44,5 +51,39 @@
     &:active {
       opacity: 0.3;
     }
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .contacts-list {
+    display: flex;
+    column-gap: 40px;
+  }
+
+  .contacts-list__item {
+    margin: 0;
+  }
+
+  .contacts-list__icon {
+    svg,
+    img {
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  .contacts-list__text {
+    padding: 0;
+  }
+
+  .contacts-list__title {
+    margin-bottom: 6px;
+    font-size: 16px;
+    line-height: 16px;
+  }
+
+  .contacts-list__value {
+    font-size: 14px;
+    line-height: 22px;
   }
 }

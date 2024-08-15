@@ -7,15 +7,6 @@
   background-color: $dark-green;
   color: $base-white;
   text-decoration: none;
-
-  &:hover,
-  &:focus-visible {
-    opacity: 0.8;
-  }
-
-  &:active {
-    opacity: 0.4;
-  }
 }
 
 .tour-card__image {
@@ -195,3 +186,15 @@
   }
 }
 
+@media (min-width: $tablet-width) {
+  .tour-card__image {
+    img {
+      width: 330px;
+      height: 416px;
+    }
+  }
+
+  .tour-card__details {
+    column-gap: 27px;
+  }
+}

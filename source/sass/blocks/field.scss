@@ -60,10 +60,38 @@
   }
 }
 
+.field--error {
+  input {
+    border-color: $error-color;
+  }
+
+  .field__label {
+    display: none;
+  }
+}
+
 .field__label {
   position: absolute;
   left: 15px;
   top: 50%;
+  max-width: 228px;
+  text-align: left;
   color: rgba($primary-color, 0.5);
   transform: translateY(-50%);
+  pointer-events: none;
 }
+
+@media (min-width: $tablet-width) {
+  .field {
+    input {
+      padding: 20px 30px;
+      height: 56px;
+      border-color: $secondary-opacity;
+    }
+  }
+
+  .field__label {
+    left: 30px;
+  }
+}
+

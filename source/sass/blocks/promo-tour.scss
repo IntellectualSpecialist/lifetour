@@ -25,7 +25,6 @@
 
   img {
     display: block;
-    max-width: none;
     width: 320px;
     height: 568px;
   }
@@ -33,8 +32,13 @@
 
 .promo-tour__info {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 568px;
   max-width: 100%;
-  padding: 114.5px 0 70px;
+  padding: 70px 0;
   text-align: center;
 }
 
@@ -67,5 +71,49 @@
 @media (max-width: $mobile-width-only) {
   .promo-tour__photos {
     display: none;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .promo-tour {
+    min-height: 1034px;
+  }
+
+  .promo-tour__picture {
+    img {
+      width: 768px;
+      height: 1034px;
+    }
+  }
+
+  .promo-tour__info {
+    min-height: 1034px;
+  }
+
+  .promo-tour__text-content {
+    font-size: 17px;
+
+    h2 {
+      font-size: 56px;
+      line-height: 56px;
+    }
+
+    p {
+      padding: 0 50px;
+    }
+  }
+
+  .promo-tour__button {
+    margin-top: 35px;
+  }
+
+  .promo-tour__photos {
+    margin-top: 45px;
+
+    img {
+      display: block;
+      width: 442px;
+      height: 365px;
+    }
   }
 }

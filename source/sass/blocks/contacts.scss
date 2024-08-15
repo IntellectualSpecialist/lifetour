@@ -16,17 +16,45 @@
   }
 }
 
-.contacts__list {
-  margin-bottom: 30px;
-}
-
 .contacts__map {
   width: 320px;
   margin-left: -15px;
+  margin-top: 30px;
 
   img {
     display: block;
     width: 320px;
     height: 343px;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .contacts__wrapper {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  .contacts__title {
+    margin-bottom: 10px;
+  }
+
+  .contacts__text-content {
+    width: 480px;
+    margin-bottom: 40px;
+  }
+
+  .contacts__list {
+    margin-right: -2px;
+  }
+
+  .contacts__map {
+    width: 768px;
+    margin-left: -45px;
+    margin-top: 40px;
+
+    img {
+      width: 768px;
+      height: 340px;
+    }
   }
 }

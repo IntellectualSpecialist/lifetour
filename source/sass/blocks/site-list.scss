@@ -1,9 +1,5 @@
 .site-list {
   @include list-reset;
-
-  width: 320px;
-  margin: 0 auto;
-  padding: 0 15px 0 10px;
 }
 
 .site-list__item {
@@ -17,10 +13,9 @@
 .site-list__link {
   position: relative;
   padding: 3px 5px 2px;
-  font-size: 14px;
   line-height: 14px;
   font-weight: 700;
-  letter-spacing: 4%;
+  letter-spacing: 0.04em;
   text-transform: uppercase;
   color: $base-white;
   text-decoration: none;
@@ -47,8 +42,8 @@
 }
 
 .site-list--dark {
-  width: auto;
-  padding: 0;
+  column-count: 2;
+  column-gap: 50px;
 
   .site-list__item {
     margin-bottom: 15px;
@@ -80,5 +75,20 @@
   .site-list__link--disabled {
     color: $base-grey;
     pointer-events: none;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .site-list--dark {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    font-size: 14px;
+    line-height: 14px;
+    text-align: left;
+
+    .site-list__item {
+      margin-bottom: 0;
+    }
   }
 }

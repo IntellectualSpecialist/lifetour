@@ -10,3 +10,17 @@
   width: 100%;
   margin-top: 8px;
 }
+
+@media (min-width: $tablet-width) {
+  .form__field {
+    margin-bottom: 11px;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+
+  .form__button {
+    margin-top: 11px;
+  }
+}

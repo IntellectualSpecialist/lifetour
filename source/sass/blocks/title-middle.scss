@@ -41,3 +41,23 @@
 .title-middle--light {
   color: $base-white;
 }
+
+@media (min-width: $tablet-width) {
+  .title-middle {
+    padding: 20px 0 10px;
+
+    &::before {
+      font-size: 40px;
+      line-height: 40px;
+    }
+
+    * {
+      font-size: 25px;
+      line-height: 25px;
+    }
+  }
+
+  .title-middle--no-duplicate {
+    padding: 0;
+  }
+}

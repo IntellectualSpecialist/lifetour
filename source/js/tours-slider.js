@@ -5,26 +5,34 @@ import 'swiper/css';
 const toursSliderElement = document.querySelector('.slider--tours');
 let toursSliderNavigationPrevElement;
 let toursSliderNavigationNextElement;
+let toursSwiperElement;
 
 if (toursSliderElement) {
-  toursSliderNavigationPrevElement = toursSliderElement.querySelector('.slider__button--prev');
-  toursSliderNavigationNextElement = toursSliderElement.querySelector('.slider__button--next');
+  toursSwiperElement = toursSliderElement.querySelector('.slider__swiper');
+  toursSliderNavigationPrevElement = toursSliderElement.querySelector('.swiper-button-prev');
+  toursSliderNavigationNextElement = toursSliderElement.querySelector('.swiper-button-next');
 }
 
-const toursSlider = new Swiper(toursSliderElement, {
+const toursSlider = new Swiper(toursSwiperElement, {
   modules: [Navigation],
   slidesPerView: 1,
   loop: false,
   init: false,
   navigation: {
-    nextEl: toursSliderNavigationPrevElement,
-    prevEl: toursSliderNavigationNextElement,
+    nextEl: toursSliderNavigationNextElement,
+    prevEl: toursSliderNavigationPrevElement,
+  },
+  breakpoints: {
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 18,
+    },
   },
 });
 
 const initToursSlider = () => {
   if (toursSliderElement) {
-    toursSliderElement.classList.remove('slider--no-js');
+    toursSwiperElement.classList.remove('slider__swiper--no-js');
     toursSlider.init();
   }
 };

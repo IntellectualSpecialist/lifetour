@@ -3,28 +3,33 @@ import {Navigation} from 'swiper/modules';
 import 'swiper/css';
 
 let gallerySlider;
-
 let gallerySliderNavigationPrevElement;
 let gallerySliderNavigationNextElement;
-
+let gallerySwiperElement;
 
 const createSlider = () => {
   const gallerySliderElement = document.querySelector('.slider--gallery');
 
   if (gallerySliderElement) {
-    gallerySliderElement.classList.remove('slider--gallery-no-js');
-    gallerySliderNavigationPrevElement = gallerySliderElement.querySelector('.slider__button--prev');
-    gallerySliderNavigationNextElement = gallerySliderElement.querySelector('.slider__button--next');
+    gallerySwiperElement = gallerySliderElement.querySelector('.slider__swiper');
+    gallerySwiperElement.classList.remove('slider__swiper--gallery-no-js');
+    gallerySliderNavigationPrevElement = gallerySliderElement.querySelector('.swiper-button-prev');
+    gallerySliderNavigationNextElement = gallerySliderElement.querySelector('.swiper-button-next');
 
-    gallerySlider = new Swiper(gallerySliderElement, {
+    gallerySlider = new Swiper(gallerySwiperElement, {
       modules: [Navigation],
       slidesPerView: 2,
       spaceBetween: 5,
-      loop: false,
+      loop: true,
       init: false,
       navigation: {
-        nextEl: gallerySliderNavigationPrevElement,
-        prevEl: gallerySliderNavigationNextElement,
+        nextEl: gallerySliderNavigationNextElement,
+        prevEl: gallerySliderNavigationPrevElement,
+      },
+      breakpoints: {
+        768: {
+          slidesPerView: 3,
+        },
       },
     });
   }
@@ -37,7 +42,6 @@ const initGallerySlider = () => {
     gallerySlider.destroy();
   }
 };
-
 
 initGallerySlider();
 

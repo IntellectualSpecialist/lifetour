@@ -13,3 +13,24 @@
 .reviews__title {
   margin-bottom: 15px;
 }
+
+@media (min-width: $tablet-width) {
+  .reviews {
+    .reviews__slider {
+      width: 768px;
+      margin-top: -5px;
+      margin-left: -45px;
+      margin-right: -45px;
+    }
+  }
+
+  .reviews__wrapper {
+    padding-top: 40px;
+    padding-bottom: 10px;
+  }
+
+  .reviews__title {
+    max-width: 570px;
+    margin-bottom: 0;
+  }
+}

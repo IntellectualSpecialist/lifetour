@@ -3,3 +3,25 @@
   padding-bottom: 50px;
   background-color: $secondary-color;
 }
+
+.main-nav__list {
+  width: 320px;
+  margin: 0 auto;
+  padding-left: 9px;
+  padding-right: 15px;
+}
+
+@media (min-width: $tablet-width) {
+  .main-nav {
+    padding-top: 30px;
+    padding-bottom: 70px;
+    background-color: $secondary-color;
+  }
+
+  .main-nav__list {
+    width: 768px;
+    margin: 0 auto;
+    padding-left: 39px;
+    padding-right: 45px;
+  }
+}

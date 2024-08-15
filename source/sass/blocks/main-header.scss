@@ -36,3 +36,27 @@
 .main-header__nav--shown {
   display: block;
 }
+
+@media (min-width: $tablet-width) {
+  .main-header__wrapper {
+    justify-content: flex-start;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .main-header__burger {
+    margin-top: 8px;
+    margin-right: auto;
+  }
+
+  .main-header__container {
+    flex-direction: row;
+    align-items: flex-start;
+    max-width: none;
+  }
+
+  .main-header__phone {
+    margin-top: 13px;
+    margin-left: 128px;
+  }
+}

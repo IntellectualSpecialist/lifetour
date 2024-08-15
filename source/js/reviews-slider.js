@@ -5,27 +5,37 @@ import 'swiper/css';
 const reviewsSliderElement = document.querySelector('.slider--reviews');
 let reviewsSliderNavigationPrevElement;
 let reviewsSliderNavigationNextElement;
+let reviewsSwiperElement;
 
 if (reviewsSliderElement) {
-  reviewsSliderNavigationPrevElement = reviewsSliderElement.querySelector('.slider__button--prev');
-  reviewsSliderNavigationNextElement = reviewsSliderElement.querySelector('.slider__button--next');
+  reviewsSwiperElement = reviewsSliderElement.querySelector('.slider__swiper');
+  reviewsSliderNavigationPrevElement = reviewsSliderElement.querySelector('.swiper-button-prev');
+  reviewsSliderNavigationNextElement = reviewsSliderElement.querySelector('.swiper-button-next');
 }
 
-const reviewsSlider = new Swiper(reviewsSliderElement, {
+const reviewsSlider = new Swiper(reviewsSwiperElement, {
   modules: [Navigation],
   autoHeight: true,
   slidesPerView: 1,
   loop: false,
   init: false,
   navigation: {
-    nextEl: reviewsSliderNavigationPrevElement,
-    prevEl: reviewsSliderNavigationNextElement,
+    nextEl: reviewsSliderNavigationNextElement,
+    prevEl: reviewsSliderNavigationPrevElement,
+  },
+  breakpoints: {
+    768: {
+      slidesPerView: 'auto',
+      spaceBetween: 30,
+      freeMode: true,
+      slidesOffsetAfter: 50,
+    },
   },
 });
 
 const initReviewsSlider = () => {
   if (reviewsSliderElement) {
-    reviewsSliderElement.classList.remove('slider--no-js');
+    reviewsSwiperElement.classList.remove('slider__swiper--no-js');
     reviewsSlider.init();
   }
 };

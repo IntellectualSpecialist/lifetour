@@ -65,3 +65,46 @@
     background-image: url("../../__spritemap#sprite-mountain-icon-view");
   }
 }
+
+@media (min-width: $tablet-width) {
+  .progress__title {
+    margin-bottom: 104px;
+  }
+
+  .progress__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 104px 160px;
+  }
+
+  .progress__item {
+    margin-bottom: 0;
+    padding-left: 35px;
+    font-size: 14px;
+    line-height: 22px;
+
+    &::before {
+      display: none;
+    }
+
+    &::after {
+      display: none;
+    }
+
+    &--movement {
+      order: 1;
+    }
+
+    &--equipment {
+      order: 3;
+    }
+
+    &--ecology {
+      order: 4;
+    }
+
+    &--mountain {
+      order: 2;
+    }
+  }
+}

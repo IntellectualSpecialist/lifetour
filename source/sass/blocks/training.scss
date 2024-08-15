@@ -19,3 +19,14 @@
 .training__progress {
   margin-top: 25px;
 }
+
+@media (min-width: $tablet-width) {
+  .training__wrapper {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  .training__title {
+    margin-bottom: 26px;
+  }
+}

@@ -1,4 +1,5 @@
 .review-card {
+  height: 100%;
   margin: 0;
   padding: 20px;
   background-color: $base-white;
@@ -41,4 +42,39 @@
   font-weight: 300;
   font-size: 12px;
   line-height: 12px;
+}
+
+@media (min-width: $tablet-width) {
+  .review-card {
+    display: flex;
+    column-gap: 30px;
+    box-shadow: 0 0 30px $dark-blue-opacity;
+  }
+
+  .review-card__image {
+    width: 186px;
+    flex-shrink: 0;
+    margin-bottom: 0;
+
+    img {
+      width: 186px;
+      height: 237px;
+    }
+  }
+
+  .review-card__text {
+    width: 299px;
+    flex-shrink: 0;
+    margin-top: -5.5px;
+  }
+
+  .review-card__text-content {
+    margin-bottom: 25px;
+  }
+
+  .review-card__name {
+    margin-bottom: 6px;
+    font-size: 13px;
+    line-height: 13px;
+  }
 }
