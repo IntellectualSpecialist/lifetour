@@ -31,6 +31,13 @@ const instructorsSlider = new Swiper(instructorsSwiperElement, {
       slidesPerView: 3,
       spaceBetween: 20,
     },
+    1440: {
+      autoHeight: false,
+      initialSlide: 0,
+      slidesPerView: 4,
+      spaceBetween: 20,
+      allowTouchMove: false,
+    },
   },
 });
 

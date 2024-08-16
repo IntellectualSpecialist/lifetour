@@ -102,7 +102,7 @@
   align-items: flex-start;
   gap: 8px;
   margin-top: 15px;
-  padding-top: 16px;
+  padding-top: 15px;
 
   &::before {
     content: "";
@@ -196,5 +196,26 @@
 
   .tour-card__details {
     column-gap: 27px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .tour-card__image {
+    img {
+      width: 380px;
+      height: 416px;
+    }
+  }
+
+  .tour-card__info {
+    justify-content: space-between;
+  }
+
+  .tour-card__details {
+    column-gap: 52px;
+  }
+
+  .tour-card__title {
+    max-width: 233px;
   }
 }

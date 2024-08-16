@@ -39,7 +39,8 @@ const initGallerySlider = () => {
   createSlider();
   gallerySlider.init();
   if (window.innerWidth >= 1440) {
-    gallerySlider.destroy();
+    // gallerySlider.disable();
+    gallerySlider.destroy(true, true);
   }
 };
 

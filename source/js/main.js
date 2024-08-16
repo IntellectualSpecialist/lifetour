@@ -12,4 +12,4 @@ initPromoSlider();
 initToursSlider();
 initInstructorsSlider();
 initReviewsSlider();
-// initFeaturesSlider();
+initFeaturesSlider();

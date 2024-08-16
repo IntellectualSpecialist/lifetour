@@ -55,9 +55,38 @@
       font-size: 25px;
       line-height: 25px;
     }
-  }
 
-  .title-middle--no-duplicate {
+    &--no-duplicate {
+      padding: 0;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .title-middle {
     padding: 0;
+    padding-top: 19px;
+
+    &::before {
+      font-size: 55px;
+      line-height: 55px;
+    }
+
+    * {
+      font-size: 35px;
+      line-height: 35px;
+    }
+
+    &--high {
+      padding-top: 35px;
+    }
+
+    &--centered {
+      padding-top: 30px;
+    }
+
+    &--no-duplicate {
+      padding: 0;
+    }
   }
 }

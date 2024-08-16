@@ -24,3 +24,22 @@
     margin-top: 11px;
   }
 }
+
+@media (min-width: $desktop-width) {
+  .form {
+    form {
+      display: flex;
+      gap: 30px;
+    }
+  }
+
+  .form__field {
+    margin-bottom: 0;
+    width: 360px;
+  }
+
+  .form__button {
+    margin-top: 0;
+    width: 180px;
+  }
+}

@@ -10,3 +10,10 @@
     line-height: 18px;
   }
 }
+
+@media (min-width: $desktop-width) {
+  .title-small {
+    font-size: 21px;
+    line-height: 21px;
+  }
+}

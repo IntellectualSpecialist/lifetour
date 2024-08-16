@@ -92,3 +92,25 @@
     }
   }
 }
+
+@media (min-width: $desktop-width) {
+  .site-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+
+    &--dark {
+      font-size: inherit;
+    }
+  }
+
+  .site-list__item {
+    margin-bottom: 0;
+  }
+
+  .site-list__link {
+    text-transform: none;
+    font-weight: 400;
+    line-height: 16px;
+  }
+}

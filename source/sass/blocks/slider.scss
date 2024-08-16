@@ -40,7 +40,7 @@
   }
 
   &:active {
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: $white-opacity;
   }
 
   &:disabled {
@@ -62,6 +62,10 @@
   &:active {
     background-color: $base-white;
   }
+}
+
+.slider--promo {
+  width: 320px;
 }
 
 .slider.slider--reviews {
@@ -125,6 +129,10 @@
     gap: 4px;
   }
 
+  .slider--promo {
+    width: 768px;
+  }
+
   .slider--instructors {
     .slider__navigation {
       top: -65px;
@@ -161,6 +169,59 @@
     }
 
     .slider__slide:not(:first-of-type):not(:nth-of-type(2)) {
+      display: none;
+    }
+  }
+}
+
+
+@media (min-width: $desktop-width) {
+  .slider--promo {
+    width: 1440px;
+  }
+
+  .slider__pagination {
+    bottom: 92px;
+    right: 70px;
+    left: auto;
+    max-width: 500px;
+  }
+
+  .slider__navigation {
+    top: -88px;
+  }
+
+  .slider--instructors {
+    .slider__navigation {
+      top: -55px;
+    }
+  }
+
+  .slider.slider--reviews {
+    .slider__wrapper {
+      padding: 10px;
+    }
+
+    .slider__navigation {
+      top: -63px;
+      right: 120px;
+    }
+  }
+
+  .slider--features {
+    padding-bottom: 85px;
+
+    .slider__navigation {
+      display: flex;
+      top: auto;
+      bottom: 0;
+      right: 50%;
+      transform: translateX(50%);
+    }
+  }
+
+  .slider.slider--gallery {
+    .slider__navigation {
       display: none;
     }
   }

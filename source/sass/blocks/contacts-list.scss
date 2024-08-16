@@ -87,3 +87,39 @@
     line-height: 22px;
   }
 }
+
+@media (min-width: $desktop-width) {
+  .contacts-list {
+    display: block;
+  }
+
+  .contacts-list__item {
+    column-gap: 40px;
+    margin-bottom: 35px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .contacts-list__icon {
+    margin-top: 12px;
+
+    svg,
+    img {
+      width: 26px;
+      height: 26px;
+    }
+  }
+
+  .contacts-list__title {
+    margin-bottom: 8px;
+    font-size: 18px;
+    line-height: 18px;
+  }
+
+  .contacts-list__value {
+    font-size: inherit;
+    line-height: inherit;
+  }
+}

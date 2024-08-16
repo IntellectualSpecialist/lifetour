@@ -60,3 +60,37 @@
     margin-left: 128px;
   }
 }
+
+@media (min-width: $desktop-width) {
+  .main-header__wrapper {
+    display: block;
+    padding-top: 42px;
+    padding-bottom: 42px;
+  }
+
+  .main-header__burger {
+    display: none;
+  }
+
+  .main-header__container {
+    padding-left: 32px;
+  }
+
+  .main-header__logo {
+    margin-right: 31px;
+  }
+
+  .main-header__nav {
+    display: block;
+    position: static;
+    padding: 0;
+    margin: 9px auto 0;
+  }
+
+  .main-header__phone {
+    margin-top: 12px;
+    margin-left: 0;
+    font-size: 18px;
+    line-height: 18px;
+  }
+}

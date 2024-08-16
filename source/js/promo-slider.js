@@ -25,12 +25,30 @@ const promoSlider = new Swiper(promoSliderElement, {
               </button>`;
     },
   },
+  breakpoints: {
+    1440: {
+      allowTouchMove: false,
+    },
+  },
 });
+
+const onSlideChange = () => {
+  promoSlider.on('slideChange', () => {
+    if (promoSliderElement) {
+      const sliderLinks = promoSliderElement.querySelectorAll('a[href]');
+      sliderLinks.forEach((link) => {
+        link.setAttribute('tabindex', '-1');
+      });
+      promoSlider.slides[promoSlider.activeIndex].querySelector('a').setAttribute('tabindex', '0');
+    }
+  });
+};
 
 const initPromoSlider = () => {
   if (promoSliderElement) {
     promoSliderElement.classList.remove('slider--no-js');
     promoSlider.init();
+    onSlideChange();
   }
 };
 

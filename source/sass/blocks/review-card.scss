@@ -78,3 +78,34 @@
     line-height: 13px;
   }
 }
+
+@media (min-width: $desktop-width) {
+  .review-card {
+    padding-right: 40px;
+    box-shadow: 0 0 20px $dark-blue-opacity;
+  }
+
+  .review-card__image {
+    width: 258px;
+
+    img {
+      width: 258px;
+      height: 253px;
+    }
+  }
+
+  .review-card__text {
+    width: 352px;
+    margin-top: -10px;
+  }
+
+  .review-card__text-content {
+    margin-bottom: -8px;
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  .review-card__name {
+    margin-bottom: 8px;
+  }
+}

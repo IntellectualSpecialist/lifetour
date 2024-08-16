@@ -27,6 +27,11 @@ const toursSlider = new Swiper(toursSwiperElement, {
       slidesPerView: 2,
       spaceBetween: 18,
     },
+    1440: {
+      slidesPerView: 3,
+      spaceBetween: 30,
+      allowTouchMove: false,
+    },
   },
 });
 

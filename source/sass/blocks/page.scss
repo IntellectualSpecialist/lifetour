@@ -70,6 +70,35 @@
     background-position:
       top 4148px center,
       top 2365px right,
-      top 1020px right;
+      top 1024px right;
+  }
+}
+
+
+@media (min-width: $desktop-width) {
+  .page__body {
+    background-image:
+      image-set(
+        url("../../img/clouds-3-desktop@1x.webp") type("image/webp") 1x,
+        url("../../img/clouds-3-desktop@2x.webp") type("image/webp") 2x,
+        url("../../img/clouds-3-desktop@1x.png") type("image/png") 1x,
+        url("../../img/clouds-3-desktop@2x.png") type("image/png") 2x
+      ),
+      image-set(
+        url("../../img/clouds-2-desktop@1x.webp") type("image/webp") 1x,
+        url("../../img/clouds-2-desktop@2x.webp") type("image/webp") 2x,
+        url("../../img/clouds-2-desktop@1x.png") type("image/png") 1x,
+        url("../../img/clouds-2-desktop@2x.png") type("image/png") 2x
+      ),
+      image-set(
+        url("../../img/clouds-1-desktop@1x.webp") type("image/webp") 1x,
+        url("../../img/clouds-1-desktop@2x.webp") type("image/webp") 2x,
+        url("../../img/clouds-1-desktop@1x.png") type("image/png") 1x,
+        url("../../img/clouds-1-desktop@2x.png") type("image/png") 2x
+      );
+    background-position:
+      top 3643px center,
+      top 2352px right,
+      top 800px right;
   }
 }

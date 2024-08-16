@@ -38,7 +38,7 @@
   align-items: center;
   min-height: 568px;
   max-width: 100%;
-  padding: 70px 0;
+  padding: 54px 0 70px;
   text-align: center;
 }
 
@@ -61,7 +61,7 @@
 
 .promo-tour__button {
   width: 180px;
-  margin-top: 60px;
+  margin-top: 50px;
 }
 
 .promo-tour__characteristics {
@@ -104,7 +104,7 @@
   }
 
   .promo-tour__button {
-    margin-top: 35px;
+    margin-top: 25px;
   }
 
   .promo-tour__photos {
@@ -115,5 +115,80 @@
       width: 442px;
       height: 365px;
     }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .promo-tour {
+    min-height: 800px;
+  }
+
+  .promo-tour__picture {
+    img {
+      width: 1440px;
+      height: 800px;
+    }
+  }
+
+  .promo-tour__info {
+    align-items: flex-start;
+    min-height: 800px;
+    padding: 200px 0 80px;
+    text-align: left;
+    row-gap: 10px;
+  }
+
+  .promo-tour__container {
+    position: relative;
+    z-index: 1;
+    flex-grow: 1;
+    display: block;
+  }
+
+  .promo-tour__text-content {
+    font-size: 17px;
+
+    h2 {
+      max-width: 944px;
+      margin-bottom: 25px;
+      font-size: 77px;
+      line-height: 77px;
+    }
+
+    p {
+      max-width: 464px;
+      padding: 0;
+    }
+  }
+
+  .promo-tour__photos {
+    position: absolute;
+    right: 0;
+    top: 187px;
+    margin-top: 0;
+
+    img {
+      width: 410px;
+      height: 459px;
+    }
+  }
+
+  .promo-tour__characteristics {
+    @include list-reset;
+
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    max-width: 600px;
+  }
+
+  .promo-tour__characteristic {
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
+    padding: 13px 19px;
+    font-size: 12px;
+    line-height: 16px;
+    border: 1px solid $white-opacity;
   }
 }

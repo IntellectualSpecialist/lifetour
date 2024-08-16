@@ -30,6 +30,12 @@ const reviewsSlider = new Swiper(reviewsSwiperElement, {
       freeMode: true,
       slidesOffsetAfter: 50,
     },
+    1440: {
+      slidesPerView: 'auto',
+      spaceBetween: 120,
+      freeMode: true,
+      slidesOffsetAfter: 50,
+    },
   },
 });
 

@@ -25,3 +25,10 @@
     padding-right: 45px;
   }
 }
+
+@media (min-width: $desktop-width) {
+  .main-nav__list {
+    width: auto;
+    padding: 0;
+  }
+}

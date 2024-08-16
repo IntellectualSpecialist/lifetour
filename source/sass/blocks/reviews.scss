@@ -7,11 +7,7 @@
 
 .reviews__wrapper {
   padding-top: 20px;
-  padding-bottom: 20px;
-}
-
-.reviews__title {
-  margin-bottom: 15px;
+  padding-bottom: 5px;
 }
 
 @media (min-width: $tablet-width) {
@@ -32,5 +28,24 @@
   .reviews__title {
     max-width: 570px;
     margin-bottom: 0;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .reviews__wrapper {
+    padding-top: 100px;
+    padding-bottom: 67px;
+  }
+
+  .reviews__title {
+    max-width: 1040px;
+    margin-bottom: 28px;
+  }
+
+  .reviews {
+    .reviews__slider {
+      width: 1320px;
+      margin: 0;
+    }
   }
 }

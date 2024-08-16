@@ -85,10 +85,18 @@
 
     &::before {
       display: none;
+      width: calc(100% + 10px);
+      height: 2px;
+      left: -10px;
+      bottom: -8px;
+      top: auto;
     }
 
     &::after {
       display: none;
+      top: 100%;
+      left: 10px;
+      transform: none;
     }
 
     &--movement {
@@ -101,10 +109,71 @@
 
     &--ecology {
       order: 4;
+
+      &::after {
+        left: auto;
+        right: 100%;
+      }
     }
 
     &--mountain {
       order: 2;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .progress__title {
+    margin-bottom: 23px;
+  }
+
+  .progress__list {
+    display: flex;
+    gap: 0;
+    padding: 0;
+    padding-bottom: 14px;
+  }
+
+  .progress__item {
+    margin-left: 10px;
+    padding-right: 10px;
+    width: 243.33px;
+    font-size: 16px;
+    line-height: 24px;
+
+    &:last-child {
+      &::before {
+        display: block;
+      }
+    }
+
+    &::before {
+      display: block;
+    }
+
+    &::after {
+      display: block;
+    }
+
+    &--movement {
+      order: 1;
+    }
+
+    &--equipment {
+      order: 2;
+    }
+
+    &--ecology {
+      order: 3;
+    }
+
+    &--mountain {
+      order: 4;
+
+      &::before {
+        display: block;
+        width: 440px;
+      }
     }
   }
 }
