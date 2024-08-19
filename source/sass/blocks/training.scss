@@ -8,7 +8,7 @@
 }
 
 .training__text-content {
-  margin-bottom: 25px;
+  margin-bottom: 27px;
 
   p {
     margin-top: 10px;
@@ -33,15 +33,21 @@
   .training__title {
     margin-bottom: 26px;
   }
+
+  .training__text-content {
+    br {
+      display: block;
+    }
+  }
 }
 
 @media (min-width: $desktop-width) {
   .training__wrapper {
-    margin-bottom: 48px;
+    padding-bottom: 48px;
   }
 
   .training__title {
-    margin-bottom: 37px;
+    margin-bottom: 35px;
   }
 
   .training__text-content {

@@ -6,8 +6,12 @@
 }
 
 .gallery__wrapper {
-  padding-top: 20px;
+  padding-top: 21px;
   padding-bottom: 3px;
+}
+
+.gallery__title {
+  margin-bottom: 9px;
 }
 
 .gallery__text-content {
@@ -16,7 +20,7 @@
   line-height: 18px;
 
   p {
-    margin-top: 10px;
+    margin-top: 9px;
     margin-bottom: 10px;
   }
 }
@@ -38,13 +42,14 @@
 .gallery .gallery__item--grid {
   display: flex;
   flex-direction: column;
-  gap: 7px;
+  gap: 6px;
 }
 
 .gallery__item--grid .gallery__image:first-child {
   img {
     width: 157px;
-    height: 134.5px;
+    height: 135px;
+    border-bottom: 1px solid #c99490;
   }
 }
 
@@ -52,6 +57,7 @@
   img {
     width: 157px;
     height: 124.5px;
+    border-top: 1px solid #c3ccd0;
   }
 }
 
@@ -69,7 +75,7 @@
 
   .gallery__title {
     max-width: 570px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
   }
 
   .gallery__text-content {
@@ -109,12 +115,12 @@
 
 @media (min-width: $desktop-width) {
   .gallery__wrapper {
-    padding-top: 100px;
+    padding-top: 104px;
   }
 
   .gallery__title {
     max-width: none;
-    margin-bottom: 26px;
+    margin-bottom: 23px;
   }
 
   .gallery {
@@ -140,11 +146,14 @@
       }
 
       &--grid {
+        gap: 6.5px;
+
         .gallery__image {
           &:first-child {
             img {
               width: 284px;
               height: 233px;
+              border: none;
             }
           }
 
@@ -152,6 +161,7 @@
             img {
               width: 284px;
               height: 223px;
+              border: none;
             }
           }
         }
@@ -161,8 +171,12 @@
 
   .gallery__text-content {
     width: 592px;
-    margin-bottom: 46px;
+    margin-bottom: 45px;
     font-size: inherit;
     line-height: inherit;
+
+    br {
+      display: none;
+    }
   }
 }

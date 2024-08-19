@@ -9,15 +9,12 @@
   cursor: pointer;
 
   &:hover,
-  &:focus-visible,
-  &:active {
-    .burger__icon::before {
-      margin-bottom: 8px;
-    }
+  &:focus-visible {
+    opacity: 0.6;
+  }
 
-    .burger__icon::after {
-      margin-top: 8px;
-    }
+  &:active {
+    opacity: 0.3;
   }
 }
 
@@ -36,16 +33,12 @@
   }
 
   &:hover,
-  &:focus-visible,
-  &:active {
-    .burger__icon {
-      transform: translateY(0) rotate(0);
-    }
+  &:focus-visible {
+    opacity: 0.6;
+  }
 
-    .burger__icon::before {
-      margin-bottom: 6px;
-      transform: translateY(0) rotate(0);
-    }
+  &:active {
+    opacity: 0.3;
   }
 }
 
@@ -65,14 +58,14 @@
     bottom: 100%;
     width: 26px;
     height: 2px;
-    margin-bottom: 6px;
+    margin-bottom: 6.5px;
     background-color: $base-white;
     transition: 0.3s ease;
   }
 
   &::after {
     top: 100%;
-    margin-top: 6px;
+    margin-top: 6.5px;
     margin-bottom: 0;
   }
 }

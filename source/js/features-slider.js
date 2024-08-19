@@ -2,13 +2,16 @@ import Swiper from 'swiper';
 import {Navigation} from 'swiper/modules';
 import 'swiper/css';
 
+const fragment = document.createDocumentFragment();
 const featuresSliderElement = document.querySelector('.slider--features');
 let featuresSwiperElement;
+let featuresSwiperWrapperElement;
 let featuresSliderNavigationPrevElement;
 let featuresSliderNavigationNextElement;
 
 if (featuresSliderElement) {
   featuresSwiperElement = featuresSliderElement.querySelector('.slider__swiper');
+  featuresSwiperWrapperElement = featuresSwiperElement.querySelector('.slider__wrapper');
   featuresSliderNavigationPrevElement = featuresSliderElement.querySelector('.swiper-button-prev');
   featuresSliderNavigationNextElement = featuresSliderElement.querySelector('.swiper-button-next');
 }
@@ -16,18 +19,29 @@ if (featuresSliderElement) {
 const featuresSlider = new Swiper(featuresSwiperElement, {
   modules: [Navigation],
   slidesPerView: 'auto',
-  loop: false,
-  init: false,
-  allowTouchMove: true,
-  spaceBetween: 30,
-  centeredSlides: true,
   initialSlide: 2,
+  loop: true,
+  init: false,
+  allowTouchMove: false,
+  spaceBetween: 30,
   slidesPerGroup: 2,
+  centeredSlides: true,
   navigation: {
     nextEl: featuresSliderNavigationNextElement,
     prevEl: featuresSliderNavigationPrevElement,
   }
 });
+
+const cloneSlides = () => {
+  const slides = featuresSwiperWrapperElement.querySelectorAll('.slider__slide');
+
+  slides.forEach((slide) => {
+    const cloneSlide = slide.cloneNode(true);
+    fragment.appendChild(cloneSlide);
+  });
+
+  featuresSwiperWrapperElement.appendChild(fragment);
+};
 
 const initFeaturesSlider = () => {
   featuresSwiperElement.classList.remove('slider__swiper--no-js');
@@ -36,6 +50,7 @@ const initFeaturesSlider = () => {
   // }
 
   if (window.innerWidth >= 1440) {
+    cloneSlides();
     featuresSlider.init();
   }
   // } else {

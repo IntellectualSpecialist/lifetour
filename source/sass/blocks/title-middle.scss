@@ -64,8 +64,7 @@
 
 @media (min-width: $desktop-width) {
   .title-middle {
-    padding: 0;
-    padding-top: 19px;
+    padding: 19px 0 1px;
 
     &::before {
       font-size: 55px;
@@ -78,11 +77,11 @@
     }
 
     &--high {
-      padding-top: 35px;
+      padding-top: 45px;
     }
 
     &--centered {
-      padding-top: 30px;
+      padding-top: 35px;
     }
 
     &--no-duplicate {

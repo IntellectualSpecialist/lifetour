@@ -25,7 +25,7 @@
 }
 
 .contacts-list__text {
-  padding-right: 30px;
+  padding-right: 75px;
 }
 
 .contacts-list__title {
@@ -57,7 +57,8 @@
 @media (min-width: $tablet-width) {
   .contacts-list {
     display: flex;
-    column-gap: 40px;
+    gap: 40px;
+    flex-wrap: wrap;
   }
 
   .contacts-list__item {
@@ -94,7 +95,7 @@
   }
 
   .contacts-list__item {
-    column-gap: 40px;
+    column-gap: 30px;
     margin-bottom: 35px;
 
     &:last-child {

@@ -194,8 +194,16 @@
     }
   }
 
+  .tour-card__info {
+    justify-content: space-between;
+  }
+
   .tour-card__details {
     column-gap: 27px;
+  }
+
+  .tour-card__title {
+    max-width: 260px;
   }
 }
 
@@ -205,10 +213,6 @@
       width: 380px;
       height: 416px;
     }
-  }
-
-  .tour-card__info {
-    justify-content: space-between;
   }
 
   .tour-card__details {

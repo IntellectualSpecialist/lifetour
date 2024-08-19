@@ -13,7 +13,7 @@
 
 @media (min-width: $tablet-width) {
   .form__field {
-    margin-bottom: 11px;
+    margin-bottom: 10px;
 
     &:last-of-type {
       margin-bottom: 0;
@@ -29,7 +29,9 @@
   .form {
     form {
       display: flex;
+      align-items: flex-start;
       gap: 30px;
+      flex-wrap: wrap;
     }
   }
 

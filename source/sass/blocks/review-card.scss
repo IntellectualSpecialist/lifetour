@@ -1,7 +1,7 @@
 .review-card {
   height: 100%;
   margin: 0;
-  padding: 20px;
+  padding: 19px;
   background-color: $base-white;
   border: 1px solid $base-white;
   box-shadow: 0 0 20px $dark-blue-opacity;
@@ -48,6 +48,7 @@
   .review-card {
     display: flex;
     column-gap: 30px;
+    padding-right: 29px;
     box-shadow: 0 0 30px $dark-blue-opacity;
   }
 
@@ -81,7 +82,7 @@
 
 @media (min-width: $desktop-width) {
   .review-card {
-    padding-right: 40px;
+    padding-right: 39px;
     box-shadow: 0 0 20px $dark-blue-opacity;
   }
 

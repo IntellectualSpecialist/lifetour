@@ -1,5 +1,5 @@
 .progress__title {
-  margin-bottom: 25px;
+  margin-bottom: 23px;
 }
 
 .progress__list {
@@ -25,19 +25,18 @@
     left: -23px;
     top: 18px;
     width: 2px;
-    height: 61px;
+    height: calc(100% + 25px);
     background-color: $secondary-color;
   }
 
   &::after {
     content: "";
     position: absolute;
-    top: 50%;
+    top: 11px;
     left: -29px;
     width: 14px;
     height: 14px;
     background-color: $secondary-color;
-    transform: translateY(-50%);
     border-radius: 50%;
   }
 
@@ -54,7 +53,7 @@
   }
 
   &--equipment {
-    background-image: url("../../__spritemap#sprite-boots-icon-view");
+    background-image: url("../../__spritemap#sprite-boots-icon-black-view");
   }
 
   &--ecology {
@@ -68,13 +67,14 @@
 
 @media (min-width: $tablet-width) {
   .progress__title {
-    margin-bottom: 104px;
+    margin-bottom: 102px;
   }
 
   .progress__list {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 104px 160px;
+    padding-left: 0;
   }
 
   .progress__item {
@@ -124,7 +124,7 @@
 
 @media (min-width: $desktop-width) {
   .progress__title {
-    margin-bottom: 23px;
+    margin-bottom: 31px;
   }
 
   .progress__list {
@@ -157,6 +157,11 @@
 
     &--movement {
       order: 1;
+
+      &::before {
+        width: 100%;
+        left: 20px;
+      }
     }
 
     &--equipment {
