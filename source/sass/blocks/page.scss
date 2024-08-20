@@ -98,6 +98,15 @@
         url("../../img/clouds-1-desktop@2x.png") type("image/png") 2x
       );
     background-position:
+      top 3643px right -339px,
+      top 2352px right,
+      top 800px right;
+  }
+}
+
+@media (min-width: $desktop-width-more) {
+  .page__body {
+    background-position:
       top 3643px center,
       top 2352px right,
       top 800px right;

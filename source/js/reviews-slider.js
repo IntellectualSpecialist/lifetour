@@ -41,7 +41,7 @@ const reviewsSlider = new Swiper(reviewsSwiperElement, {
 
 const initReviewsSlider = () => {
   if (reviewsSliderElement) {
-    reviewsSwiperElement.classList.remove('slider__swiper--no-js');
+    reviewsSliderElement.classList.remove('slider--no-js');
     reviewsSlider.init();
   }
 };

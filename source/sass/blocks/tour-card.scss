@@ -2,6 +2,7 @@
   position: relative;
   display: flex;
   align-items: flex-end;
+  width: 290px;
   padding: 30px 20px;
   min-height: 416px;
   background-color: $dark-green;
@@ -34,6 +35,7 @@
 
 .tour-card__text {
   position: relative;
+  width: 100%;
 }
 
 .tour-card__info {
@@ -187,6 +189,10 @@
 }
 
 @media (min-width: $tablet-width) {
+  .tour-card {
+    width: 330px;
+  }
+
   .tour-card__image {
     img {
       width: 330px;
@@ -208,6 +214,10 @@
 }
 
 @media (min-width: $desktop-width) {
+  .tour-card {
+    width: 380px;
+  }
+
   .tour-card__image {
     img {
       width: 380px;

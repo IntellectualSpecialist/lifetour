@@ -43,7 +43,7 @@ const instructorsSlider = new Swiper(instructorsSwiperElement, {
 
 const initInstructorsSlider = () => {
   if (instructorsSliderElement) {
-    instructorsSwiperElement.classList.remove('slider__swiper--instructors-no-js');
+    instructorsSliderElement.classList.remove('slider--no-js');
     instructorsSlider.init();
   }
 };

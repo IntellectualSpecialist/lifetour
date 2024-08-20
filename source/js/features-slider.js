@@ -44,7 +44,7 @@ const cloneSlides = () => {
 };
 
 const initFeaturesSlider = () => {
-  featuresSwiperElement.classList.remove('slider__swiper--no-js');
+  featuresSliderElement.classList.remove('slider--no-js');
   // if (window.innerWidth < 1440) {
   //   featuresSlider.destroy(true, true);
   // }

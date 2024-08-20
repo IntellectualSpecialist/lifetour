@@ -12,7 +12,7 @@ const createSlider = () => {
 
   if (gallerySliderElement) {
     gallerySwiperElement = gallerySliderElement.querySelector('.slider__swiper');
-    gallerySwiperElement.classList.remove('slider__swiper--gallery-no-js');
+    gallerySliderElement.classList.remove('slider--no-js');
     gallerySliderNavigationPrevElement = gallerySliderElement.querySelector('.swiper-button-prev');
     gallerySliderNavigationNextElement = gallerySliderElement.querySelector('.swiper-button-next');
 

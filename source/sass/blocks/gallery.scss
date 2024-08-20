@@ -85,7 +85,7 @@
     line-height: 22px;
   }
 
-  .gallery__item {
+  .gallery .gallery__item {
     &--block {
       img {
         width: 253px;
@@ -94,11 +94,14 @@
     }
 
     &--grid {
+      gap: 7px;
+
       .gallery__image {
         &:first-child {
           img {
             width: 252px;
             height: 209.5px;
+            border: none;
           }
         }
 
@@ -106,6 +109,7 @@
           img {
             width: 252px;
             height: 201.5px;
+            border: none;
           }
         }
       }
@@ -153,7 +157,6 @@
             img {
               width: 284px;
               height: 233px;
-              border: none;
             }
           }
 
@@ -161,7 +164,6 @@
             img {
               width: 284px;
               height: 223px;
-              border: none;
             }
           }
         }

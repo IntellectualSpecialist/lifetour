@@ -64,10 +64,6 @@
   }
 }
 
-.slider--promo {
-  width: 320px;
-}
-
 .slider.slider--reviews {
   .slider__slide {
     width: 320px;
@@ -81,37 +77,49 @@
   }
 }
 
-.slider__swiper--no-js {
-  .slider__slide:not(:first-of-type) {
-    display: none;
+.slider--no-js {
+  .slider__swiper {
+    overflow: hidden;
+  }
+
+  .slider__wrapper {
+    display: flex;
+    align-items: flex-start;
+    overflow: hidden;
+  }
+
+  .slider__slide {
+    flex-shrink: 0;
   }
 }
 
-.slider__swiper--instructors-no-js {
-  .slider__slide:not(:nth-of-type(3)) {
-    display: none;
+.slider--instructors.slider--no-js {
+  .slider__wrapper {
+    margin-left: -580px;
+    transform: translate(0);
+  }
+}
+
+.slider--features.slider--no-js {
+  .slider__wrapper {
+    display: block;
+    overflow: auto;
+  }
+
+  .slider__slide {
+    flex-shrink: 0;
+  }
+}
+
+.slider--gallery.slider--no-js {
+  .slider__wrapper {
+    gap: 5px;
   }
 }
 
 @media (max-width: $mobile-width-only) {
   .slider__navigation {
     display: none;
-  }
-
-  .slider__swiper--gallery-no-js {
-    .slider__wrapper {
-      display: flex;
-      gap: 5px;
-    }
-
-    .slider__slide {
-      display: none;
-
-      &:first-child,
-      &:nth-child(2) {
-        display: flex;
-      }
-    }
   }
 }
 
@@ -129,13 +137,22 @@
     gap: 4px;
   }
 
-  .slider--promo {
-    width: 768px;
+  .slider--tours.slider--no-js {
+    .slider__wrapper {
+      gap: 18px;
+    }
   }
 
   .slider--instructors {
     .slider__navigation {
       top: -65px;
+    }
+  }
+
+  .slider--instructors.slider--no-js {
+    .slider__wrapper {
+      margin-left: 0;
+      gap: 20px;
     }
   }
 
@@ -156,30 +173,28 @@
     }
   }
 
+  .slider--reviews.slider--no-js {
+    .slider__wrapper {
+      gap: 30px;
+    }
+  }
+
+  .slider--features.slider--no-js {
+    .slider__wrapper {
+      display: flex;
+    }
+  }
+
   .slider.slider--gallery {
     .slider__navigation {
       top: -56px;
       right: 45px;
     }
   }
-
-  .slider__swiper--no-js {
-    .slider__slide {
-      display: block;
-    }
-
-    .slider__slide:not(:first-of-type):not(:nth-of-type(2)) {
-      display: none;
-    }
-  }
 }
 
 
 @media (min-width: $desktop-width) {
-  .slider--promo {
-    width: 1440px;
-  }
-
   .slider__pagination {
     bottom: 92px;
     right: 70px;
@@ -189,6 +204,12 @@
 
   .slider__navigation {
     top: -88px;
+  }
+
+  .slider--tours.slider--no-js {
+    .slider__wrapper {
+      gap: 30px;
+    }
   }
 
   .slider--instructors {
@@ -208,6 +229,12 @@
     }
   }
 
+  .slider--reviews.slider--no-js {
+    .slider__wrapper {
+      gap: 120px;
+    }
+  }
+
   .slider--features {
     padding-bottom: 85px;
 
@@ -217,6 +244,15 @@
       bottom: 0;
       right: 50%;
       transform: translateX(50%);
+    }
+  }
+
+  .slider--features.slider--no-js {
+    .slider__wrapper {
+      display: flex;
+      gap: 30px;
+      margin-left: -290px;
+      overflow: hidden;
     }
   }
 

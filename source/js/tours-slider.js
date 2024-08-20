@@ -37,7 +37,7 @@ const toursSlider = new Swiper(toursSwiperElement, {
 
 const initToursSlider = () => {
   if (toursSliderElement) {
-    toursSwiperElement.classList.remove('slider__swiper--no-js');
+    toursSliderElement.classList.remove('slider--no-js');
     toursSlider.init();
   }
 };

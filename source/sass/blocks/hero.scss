@@ -2,3 +2,20 @@
   color: $base-white;
   background-color: $hero-bg;
 }
+
+.hero__slider {
+  width: 320px;
+  margin: 0 auto;
+}
+
+@media (min-width: $tablet-width) {
+  .hero__slider {
+    width: 768px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .hero__slider {
+    width: 1440px;
+  }
+}
