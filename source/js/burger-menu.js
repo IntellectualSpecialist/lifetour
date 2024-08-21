@@ -45,6 +45,7 @@ const onNavBurgerClick = (evt) => {
 const registerResizeWindowEvents = () => {
   desktopWidthMediaQuery.addEventListener('change', (evt) => {
     if (evt.matches) {
+      mainNavElement.style.height = 'auto';
       navBurgerElement.removeEventListener('click', onNavBurgerClick);
     } else {
       navBurgerElement.addEventListener('click', onNavBurgerClick);
