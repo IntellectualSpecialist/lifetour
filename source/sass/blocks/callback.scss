@@ -5,10 +5,10 @@
   background-color: $dark-green;
   background-image:
     image-set(
-      url("../../img/pine-woods-mobile@1x.webp") type("image/webp") 1x,
-      url("../../img/pine-woods-mobile@2x.webp") type("image/webp") 2x,
-      url("../../img/pine-woods-mobile@1x.png") type("image/png") 1x,
-      url("../../img/pine-woods-mobile@2x.png") type("image/png") 2x
+      url("../img/pine-woods-mobile@1x.webp") type("image/webp") 1x,
+      url("../img/pine-woods-mobile@2x.webp") type("image/webp") 2x,
+      url("../img/pine-woods-mobile@1x.png") type("image/png") 1x,
+      url("../img/pine-woods-mobile@2x.png") type("image/png") 2x
     );
   background-repeat: no-repeat;
   background-position: center;
@@ -55,10 +55,10 @@
   .callback {
     background-image:
       image-set(
-        url("../../img/pine-woods-tablet@1x.webp") type("image/webp") 1x,
-        url("../../img/pine-woods-tablet@2x.webp") type("image/webp") 2x,
-        url("../../img/pine-woods-tablet@1x.png") type("image/png") 1x,
-        url("../../img/pine-woods-tablet@2x.png") type("image/png") 2x
+        url("../img/pine-woods-tablet@1x.webp") type("image/webp") 1x,
+        url("../img/pine-woods-tablet@2x.webp") type("image/webp") 2x,
+        url("../img/pine-woods-tablet@1x.png") type("image/png") 1x,
+        url("../img/pine-woods-tablet@2x.png") type("image/png") 2x
       );
   }
 
@@ -88,10 +88,10 @@
   .callback {
     background-image:
       image-set(
-        url("../../img/pine-woods-desktop@1x.webp") type("image/webp") 1x,
-        url("../../img/pine-woods-desktop@2x.webp") type("image/webp") 2x,
-        url("../../img/pine-woods-desktop@1x.png") type("image/png") 1x,
-        url("../../img/pine-woods-desktop@2x.png") type("image/png") 2x
+        url("../img/pine-woods-desktop@1x.webp") type("image/webp") 1x,
+        url("../img/pine-woods-desktop@2x.webp") type("image/webp") 2x,
+        url("../img/pine-woods-desktop@1x.png") type("image/png") 1x,
+        url("../img/pine-woods-desktop@2x.png") type("image/png") 2x
       );
   }
 
