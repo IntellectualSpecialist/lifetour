@@ -1,6 +1,14 @@
 import Swiper from 'swiper';
 import {Navigation} from 'swiper/modules';
 import 'swiper/css';
+import { tabletWidthOnlyMediaQuery, desktopWidthMediaQuery } from './const';
+
+const initialSlideNumber = 2;
+const spaceBetweenValue = 30;
+const slidesPerGroupCount = 2;
+const minSlidesCount = 8;
+const desktopWidth = 1440;
+const slideMultiplier = 2;
 
 const fragment = document.createDocumentFragment();
 const featuresSliderElement = document.querySelector('.slider--features');
@@ -8,6 +16,7 @@ let featuresSwiperElement;
 let featuresSwiperWrapperElement;
 let featuresSliderNavigationPrevElement;
 let featuresSliderNavigationNextElement;
+let featuresSlider;
 
 if (featuresSliderElement) {
   featuresSwiperElement = featuresSliderElement.querySelector('.slider__swiper');
@@ -16,64 +25,83 @@ if (featuresSliderElement) {
   featuresSliderNavigationNextElement = featuresSliderElement.querySelector('.swiper-button-next');
 }
 
-const featuresSlider = new Swiper(featuresSwiperElement, {
-  modules: [Navigation],
-  slidesPerView: 'auto',
-  initialSlide: 2,
-  loop: true,
-  init: false,
-  allowTouchMove: false,
-  spaceBetween: 30,
-  slidesPerGroup: 2,
-  centeredSlides: true,
-  navigation: {
-    nextEl: featuresSliderNavigationNextElement,
-    prevEl: featuresSliderNavigationPrevElement,
+const createSlider = () => {
+  featuresSlider = new Swiper(featuresSwiperElement, {
+    modules: [Navigation],
+    slidesPerView: 'auto',
+    initialSlide: initialSlideNumber,
+    loop: true,
+    init: false,
+    allowTouchMove: false,
+    spaceBetween: spaceBetweenValue,
+    slidesPerGroup: slidesPerGroupCount,
+    centeredSlides: true,
+    navigation: {
+      nextEl: featuresSliderNavigationNextElement,
+      prevEl: featuresSliderNavigationPrevElement,
+    }
+  });
+
+  featuresSlider.init();
+};
+
+const destroySlider = () => {
+  if (featuresSlider !== undefined) {
+    featuresSlider.destroy(true, true);
   }
-});
+};
 
 const cloneSlides = () => {
   const slides = featuresSwiperWrapperElement.querySelectorAll('.slider__slide');
+  let currentSlidesCount = slides.length;
+
+  while (currentSlidesCount < minSlidesCount) {
+    slides.forEach((slide) => {
+      const cloneSlide = slide.cloneNode(true);
+      cloneSlide.dataset.clone = 'true';
+      fragment.appendChild(cloneSlide);
+    });
+
+    featuresSwiperWrapperElement.appendChild(fragment);
+    currentSlidesCount *= slideMultiplier;
+  }
+};
+
+const removeCloneSlides = () => {
+  const slides = featuresSwiperWrapperElement.querySelectorAll('.slider__slide');
 
   slides.forEach((slide) => {
-    const cloneSlide = slide.cloneNode(true);
-    fragment.appendChild(cloneSlide);
+    if (slide.dataset.clone === 'true') {
+      slide.remove();
+    }
+  });
+};
+
+const registerResizeWindowEvents = () => {
+  tabletWidthOnlyMediaQuery.addEventListener('change', (evt) => {
+    if (evt.matches) {
+      destroySlider();
+      removeCloneSlides();
+    }
   });
 
-  featuresSwiperWrapperElement.appendChild(fragment);
+  desktopWidthMediaQuery.addEventListener('change', (evt) => {
+    if (evt.matches) {
+      cloneSlides();
+      createSlider();
+    }
+  });
 };
 
 const initFeaturesSlider = () => {
-  featuresSliderElement.classList.remove('slider--no-js');
-  // if (window.innerWidth < 1440) {
-  //   featuresSlider.destroy(true, true);
-  // }
+  if (featuresSliderElement) {
+    if (window.innerWidth >= desktopWidth) {
+      cloneSlides();
+      createSlider();
+    }
 
-  if (window.innerWidth >= 1440) {
-    cloneSlides();
-    featuresSlider.init();
+    registerResizeWindowEvents();
   }
-  // } else {
-  //   if (featuresSlider) {
-  //     featuresSlider.destroy();
-  //   }
-  // }
 };
-
-// const onWindowResize = () => {
-//   console.log(featuresSlider !== undefined);
-
-//   if (window.innerWidth >= 1440) {
-//     if (!featuresSlider) {
-//       createSlider();
-//       featuresSlider.init();
-//     }
-//   } else {
-//     featuresSlider.destroy();
-//   }
-// };
-
-// initFeaturesSlider();
-// window.addEventListener('resize', onWindowResize);
 
 export { initFeaturesSlider };

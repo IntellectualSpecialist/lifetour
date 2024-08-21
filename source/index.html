@@ -23,7 +23,7 @@
   <body class="page__body">
     <header class="main-header" data-test="header">
       <div class="main-header__wrapper container">
-        <a class="main-header__burger burger" href="#">
+        <a class="main-header__burger burger js-toggle-button" href="#">
           <span class="visually-hidden">Меню</span>
           <span class="burger__icon"></span>
         </a>
@@ -902,11 +902,11 @@
             <form action="https://echo.htmlacademy.ru/" method="post">
               <label class="form__field field">
                 <span class="field__label">Телефон</span>
-                <input type="tel" name="phone" id="phone" required>
+                <input type="tel" name="phone" id="phone" placeholder="+7 (000)-000-00-00" required>
               </label>
               <label class="form__field field">
                 <span class="field__label">Email</span>
-                <input type="email" name="email" id="email" required>
+                <input type="email" name="email" id="email" placeholder="example@domen.ru" required>
               </label>
               <button class="form__button button" type="submit">Отправить</button>
             </form>
@@ -915,7 +915,7 @@
       </section>
     </main>
     <footer class="main-footer" data-test="footer">
-      <section class="main-footer__contacts contacts" id="contacts">
+      <section class="contacts" id="contacts">
         <div class="contacts__wrapper container">
           <div class="contacts__text">
             <div class="contacts__title title-middle" data-value="Контакты">
@@ -972,7 +972,7 @@
           </div>
         </div>
       </section>
-      <div class="main-footer__sub-footer sub-footer">
+      <div class="sub-footer">
         <div class="sub-footer__wrapper container">
           <div class="sub-footer__container">
             <a class="sub-footer__logo logo logo--dark" href="#">

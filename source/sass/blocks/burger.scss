@@ -13,7 +13,9 @@
     opacity: 0.6;
   }
 
-  &:active {
+  &:active,
+  &:disabled,
+  &--disabled {
     opacity: 0.3;
   }
 }

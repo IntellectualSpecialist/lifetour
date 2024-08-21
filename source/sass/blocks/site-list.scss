@@ -1,5 +1,8 @@
 .site-list {
   @include list-reset;
+
+  padding-top: 15px;
+  padding-bottom: 50px;
 }
 
 .site-list__item {
@@ -42,6 +45,7 @@
 }
 
 .site-list--dark {
+  padding: 0;
   column-count: 2;
   column-gap: 50px;
 
@@ -80,16 +84,22 @@
 }
 
 @media (min-width: $tablet-width) {
-  .site-list--dark {
-    display: flex;
-    gap: 8px;
-    flex-wrap: wrap;
-    font-size: 14px;
-    line-height: 14px;
-    text-align: left;
+  .site-list {
+    padding-top: 30px;
+    padding-bottom: 70px;
 
-    .site-list__item {
-      margin-bottom: 0;
+    &--dark {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      padding: 0;
+      font-size: 14px;
+      line-height: 14px;
+      text-align: left;
+
+      .site-list__item {
+        margin-bottom: 0;
+      }
     }
   }
 }

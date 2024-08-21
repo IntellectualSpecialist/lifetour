@@ -2,16 +2,20 @@ import Swiper from 'swiper';
 import {Pagination} from 'swiper/modules';
 import 'swiper/css';
 
+const initialSlide = 0;
+const slidesPerViewCount = 1;
 const promoSliderElement = document.querySelector('.slider--promo');
+let sliderLinks;
 let promoSliderPaginatonElement;
 
 if (promoSliderElement) {
   promoSliderPaginatonElement = promoSliderElement.querySelector('.slider__pagination');
+  sliderLinks = promoSliderElement.querySelectorAll('a[href]');
 }
 
 const promoSlider = new Swiper(promoSliderElement, {
   modules: [Pagination],
-  slidesPerView: 1,
+  slidesPerView: slidesPerViewCount,
   loop: true,
   init: false,
   pagination: {
@@ -32,21 +36,24 @@ const promoSlider = new Swiper(promoSliderElement, {
   },
 });
 
+const setLinksTabindex = () => {
+  sliderLinks.forEach((link) => {
+    link.setAttribute('tabindex', '-1');
+  });
+};
+
 const onSlideChange = () => {
   promoSlider.on('slideChange', () => {
-    if (promoSliderElement) {
-      const sliderLinks = promoSliderElement.querySelectorAll('a[href]');
-      sliderLinks.forEach((link) => {
-        link.setAttribute('tabindex', '-1');
-      });
-      promoSlider.slides[promoSlider.activeIndex].querySelector('a').setAttribute('tabindex', '0');
-    }
+    setLinksTabindex();
+    promoSlider.slides[promoSlider.activeIndex].querySelector('a').setAttribute('tabindex', '0');
   });
 };
 
 const initPromoSlider = () => {
   if (promoSliderElement) {
-    promoSliderElement.classList.remove('slider--no-js');
+    setLinksTabindex();
+    sliderLinks[initialSlide].setAttribute('tabindex', '0');
+
     promoSlider.init();
     onSlideChange();
   }

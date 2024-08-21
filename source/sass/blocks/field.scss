@@ -14,8 +14,7 @@
     border-radius: 2px;
     border: 1px solid transparent;
 
-    &:hover,
-    &:placeholder-shown {
+    &:hover {
       border-color: $secondary-color;
     }
 
@@ -31,9 +30,14 @@
     &:user-invalid {
       border-color: $error-color;
     }
+
+    &:focus-visible::placeholder {
+      opacity: 1;
+    }
   }
 
   input::placeholder {
+    opacity: 0;
     color: rgba($secondary-color, 0.5);
   }
 
@@ -48,6 +52,12 @@
   }
 
   &:has(input:user-valid) {
+    .field__label {
+      display: none;
+    }
+  }
+
+  &:has(input:user-invalid) {
     .field__label {
       display: none;
     }
@@ -88,6 +98,12 @@
       padding: 20px 30px;
       height: 56px;
       border-color: $secondary-opacity;
+    }
+
+    &--error {
+      input {
+        border-color: $error-color;
+      }
     }
   }
 
