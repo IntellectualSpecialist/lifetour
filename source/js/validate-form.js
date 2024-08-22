@@ -11,14 +11,14 @@ if (formElement) {
   emailFieldElement = emailInputElement.closest('.field');
 }
 
+const isValidEmail = (email) => {
+  const pattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Zа-яёА-ЯЁ0-9.-]+\.[рф|a-zA-Z0-9-]{2,}$/;
+  return pattern.test(email);
+};
+
 const isValidPhone = (phone) => {
   const pattern = /^\+7(\s\([0-9]{3}\)-[0-9]{3}-[0-9]{2}-[0-9]{2}|[0-9]{10})$/;
   return pattern.test(phone);
-};
-
-const isValidEmail = (email) => {
-  const pattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.(рф|xn--p1ai|[a-zA-Zа-яёА-ЯЁ]{2,})$/;
-  return pattern.test(email);
 };
 
 const cleanFields = () => {
