@@ -1,5 +1,5 @@
 import { initNavBurger } from './burger-menu';
-import { removeSlidersNoJsClass } from './utils';
+import { removeSlidersNoJsClass, updateDuplicateText } from './utils';
 import { initPromoSlider } from './promo-slider';
 import { initToursSlider } from './tours-slider';
 import { initInstructorsSlider } from './instructors-slider';
@@ -10,6 +10,7 @@ import { initFormValidate } from './validate-form';
 
 const bootstrap = () => {
   initNavBurger();
+  updateDuplicateText();
   removeSlidersNoJsClass();
   initPromoSlider();
   initToursSlider();

@@ -20,6 +20,10 @@
   max-width: 234px;
 }
 
+.main-header__burger {
+  margin-left: -5px;
+}
+
 .main-header__phone {
   margin-top: 16px;
 }
@@ -68,20 +72,12 @@
 @media (min-width: $desktop-width) {
   .main-header__wrapper {
     display: block;
-    padding-top: 42px;
-    padding-bottom: 42px;
+    padding-top: 32px;
+    padding-bottom: 32px;
   }
 
   .main-header__burger {
     display: none;
-  }
-
-  .main-header__container {
-    padding-left: 32px;
-  }
-
-  .main-header__logo {
-    margin-right: 30px;
   }
 
   .main-header__nav {
@@ -89,13 +85,13 @@
     display: block;
     max-width: 755px;
     height: auto;
-    padding: 0;
-    margin: 10px auto 0;
+    margin: 20px auto 0;
+    overflow: visible;
   }
 
   .main-header__phone {
     width: 157px;
-    margin-top: 14px;
+    margin-top: 24px;
     margin-left: 0;
     font-size: 18px;
     line-height: 18px;

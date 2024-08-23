@@ -95,8 +95,11 @@
 
 .slider--instructors.slider--no-js {
   .slider__wrapper {
-    margin-left: -580px;
     transform: translate(0);
+  }
+
+  .slider__slide:nth-of-type(3) {
+    order: -1;
   }
 }
 
@@ -154,6 +157,10 @@
       margin-left: 0;
       gap: 20px;
       align-items: stretch;
+    }
+
+    .slider__slide:nth-of-type(3) {
+      order: 0;
     }
   }
 

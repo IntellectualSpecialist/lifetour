@@ -24,7 +24,7 @@ const promoSlider = new Swiper(promoSliderElement, {
     bulletClass: 'slider__pagination-button',
     bulletActiveClass: 'slider__pagination-button--active',
     renderBullet: function (index, className) {
-      return `<button class="${className}">
+      return `<button class="${className}" type="button">
                 <span class="visually-hidden">${index + 1} слайд</span>
               </button>`;
     },
@@ -45,7 +45,7 @@ const setLinksTabindex = () => {
 const onSlideChange = () => {
   promoSlider.on('slideChange', () => {
     setLinksTabindex();
-    promoSlider.slides[promoSlider.activeIndex].querySelector('a').setAttribute('tabindex', '0');
+    promoSlider.slides[promoSlider.activeIndex].querySelector('a[href]').setAttribute('tabindex', '0');
   });
 };
 

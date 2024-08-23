@@ -1,5 +1,6 @@
 import { desktopWidthMediaQuery } from './const';
 
+const desktopWidth = 1440;
 const bodyElement = document.querySelector('.page__body');
 const mainNavElement = bodyElement.querySelector('.main-header__nav');
 const navBurgerElement = bodyElement.querySelector('.js-toggle-button');
@@ -45,7 +46,11 @@ const onNavBurgerClick = (evt) => {
 const registerResizeWindowEvents = () => {
   desktopWidthMediaQuery.addEventListener('change', (evt) => {
     if (evt.matches) {
-      mainNavElement.style.height = 'auto';
+      if (mainNavElement.classList.contains('main-header__nav--shown')) {
+        closeMenu();
+      }
+
+      mainNavElement.removeAttribute('style');
       navBurgerElement.removeEventListener('click', onNavBurgerClick);
     } else {
       navBurgerElement.addEventListener('click', onNavBurgerClick);
@@ -55,7 +60,10 @@ const registerResizeWindowEvents = () => {
 
 const initNavBurger = () => {
   if (navBurgerElement) {
-    navBurgerElement.addEventListener('click', onNavBurgerClick);
+    if (window.innerWidth < desktopWidth) {
+      navBurgerElement.addEventListener('click', onNavBurgerClick);
+    }
+
     registerResizeWindowEvents();
   }
 };

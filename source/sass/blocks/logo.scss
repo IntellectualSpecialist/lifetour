@@ -17,3 +17,18 @@
     opacity: 0.3;
   }
 }
+
+@media (min-width: $desktop-width) {
+  .logo {
+    width: 205px;
+    height: 62px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &--dark {
+      width: 200px;
+      height: 60px;
+    }
+  }
+}

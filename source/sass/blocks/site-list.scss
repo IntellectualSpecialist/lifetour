@@ -1,8 +1,7 @@
 .site-list {
   @include list-reset;
 
-  padding-top: 15px;
-  padding-bottom: 50px;
+  padding: 15px 15px 50px 9px;
 }
 
 .site-list__item {
@@ -51,10 +50,6 @@
 
   .site-list__item {
     margin-bottom: 9px;
-
-    &:last-child {
-      margin-bottom: 0;
-    }
   }
 
   .site-list__link {
@@ -85,8 +80,7 @@
 
 @media (min-width: $tablet-width) {
   .site-list {
-    padding-top: 30px;
-    padding-bottom: 70px;
+    padding: 30px 45px 70px 39px;
 
     &--dark {
       display: flex;
@@ -109,6 +103,7 @@
     display: flex;
     flex-wrap: wrap;
     gap: 19px;
+    padding: 0;
 
     &--dark {
       font-size: inherit;

@@ -1,8 +1,8 @@
 .burger {
   display: flex;
   align-items: center;
-  padding: 3.5px 0;
-  width: 26px;
+  padding: 3.5px 5px;
+  width: 36px;
   height: 26px;
   border: none;
   background-color: transparent;
@@ -18,6 +18,15 @@
   &--disabled {
     opacity: 0.3;
   }
+
+  &:disabled,
+  &--disabled {
+    pointer-events: none;
+
+    &:focus-visible {
+      opacity: 0.3;
+    }
+  }
 }
 
 .burger--active {
@@ -32,15 +41,6 @@
 
   .burger__icon::after {
     display: none;
-  }
-
-  &:hover,
-  &:focus-visible {
-    opacity: 0.6;
-  }
-
-  &:active {
-    opacity: 0.3;
   }
 }
 

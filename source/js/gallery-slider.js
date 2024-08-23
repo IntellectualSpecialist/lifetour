@@ -64,11 +64,13 @@ const registerResizeWindowEvents = () => {
 };
 
 const initGallerySlider = () => {
-  createSlider();
-  registerResizeWindowEvents();
+  if (gallerySliderElement) {
+    createSlider();
+    registerResizeWindowEvents();
 
-  if (window.innerWidth >= desktopWidth) {
-    destroySlider();
+    if (window.innerWidth >= desktopWidth) {
+      destroySlider();
+    }
   }
 };
 

@@ -8,7 +8,6 @@ const spaceBetweenValue = 30;
 const slidesPerGroupCount = 2;
 const minSlidesCount = 8;
 const desktopWidth = 1440;
-const slideMultiplier = 2;
 
 const fragment = document.createDocumentFragment();
 const featuresSliderElement = document.querySelector('.slider--features');
@@ -52,19 +51,20 @@ const destroySlider = () => {
 };
 
 const cloneSlides = () => {
-  const slides = featuresSwiperWrapperElement.querySelectorAll('.slider__slide');
-  let currentSlidesCount = slides.length;
+  const slideElements = featuresSwiperWrapperElement.querySelectorAll('.slider__slide');
+  let currentSlidesCount = slideElements.length;
 
   while (currentSlidesCount < minSlidesCount) {
-    slides.forEach((slide) => {
+    slideElements.forEach((slide) => {
       const cloneSlide = slide.cloneNode(true);
       cloneSlide.dataset.clone = 'true';
       fragment.appendChild(cloneSlide);
     });
 
-    featuresSwiperWrapperElement.appendChild(fragment);
-    currentSlidesCount *= slideMultiplier;
+    currentSlidesCount += slideElements.length;
   }
+
+  featuresSwiperWrapperElement.appendChild(fragment);
 };
 
 const removeCloneSlides = () => {

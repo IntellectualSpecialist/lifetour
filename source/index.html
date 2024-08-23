@@ -23,10 +23,10 @@
   <body class="page__body">
     <header class="main-header" data-test="header">
       <div class="main-header__wrapper container">
-        <a class="main-header__burger burger js-toggle-button" href="#">
-          <span class="visually-hidden">Меню</span>
+        <button class="main-header__burger burger js-toggle-button" type="button">
+          <span class="visually-hidden">Открыть/закрыть меню</span>
           <span class="burger__icon"></span>
-        </a>
+        </button>
         <div class="main-header__container">
           <a class="main-header__logo logo" href="#">
             <img src="/__spritemap#sprite-logo-view" width="142" height="42" alt="Логотип «Lifetour». Перейти на главную страницу.">
@@ -60,6 +60,7 @@
     <main>
       <h1 class="visually-hidden">Lifetour</h1>
       <section class="hero" data-test="hero">
+        <h2 class="visually-hidden">Промо-туры</h2>
         <div class="hero__slider slider slider--promo slider--no-js swiper">
           <div class="slider__wrapper swiper-wrapper">
             <div class="slider__slide swiper-slide">
@@ -78,7 +79,7 @@
                   <div class="promo-tour__info">
                     <div class="promo-tour__container">
                       <div class="promo-tour__text-content">
-                        <h2>Захватывающие вершины Кавказа</h2>
+                        <h3>Захватывающие вершины Кавказа</h3>
                         <p>В сопровождении опытных гидов вы пройдёте через потрясающие ландшафты и совершите восход на вершину горы Чегет.</p>
                       </div>
                       <a class="promo-tour__button button" href="#">Смотреть тур</a>
@@ -118,7 +119,7 @@
                     <div class="promo-tour__info">
                       <div class="promo-tour__container">
                         <div class="promo-tour__text-content">
-                          <h2>Невероятная природа Камчатки</h2>
+                          <h3>Невероятная природа Камчатки</h3>
                           <p>Незабываемое приключение, во время которого вы отправитесь в путешествие по одному из самых нетронутых уголков дикой природы в мире.</p>
                         </div>
                         <a class="promo-tour__button button" href="#">Смотреть тур</a>
@@ -166,7 +167,7 @@
                   <div class="promo-tour__info">
                     <div class="promo-tour__container">
                       <div class="promo-tour__text-content">
-                        <h2>Магические пейзажи Алтайского Края</h2>
+                        <h3>Магические пейзажи Алтайского Края</h3>
                         <p>Алтайский трекинг-тур — это захватывающее приключение с посещением магических и захватывающих дух ландшафтов Алтайских гор.</p>
                       </div>
                       <a class="promo-tour__button button" href="#">Смотреть тур</a>
@@ -712,7 +713,7 @@
                       <cite class="review-card__name">Елена Пирогова</cite>
                       <p class="review-card__about">37 лет, Тюмень</p>
                     </div>
-                  </article>
+                  </blockquote>
                 </div>
               </div>
             </div>
@@ -739,7 +740,7 @@
                     <p>Уделяем внимание безопасности клиентов, внедряя строгие процедуры и протоколы безопасности. Имеем планы действий на случай непредвиденных обстоятельств и даём гарантию полной безопасности во время всего тура.</p>
                   </div>
                 </div>
-                <div class="features__item slider__slide swiper-slide">
+                 <div class="features__item slider__slide swiper-slide">
                   <div class="features__icon">
                     <svg width="24" height="24" viewBox="0 0 24 24" role="img" aria-labelledby="expertise">
                       <title id="expertise">Экспертиза и знания</title>

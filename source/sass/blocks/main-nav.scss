@@ -5,26 +5,17 @@
 .main-nav__list {
   width: 320px;
   margin: 0 auto;
-  padding-left: 9px;
-  padding-right: 15px;
 }
 
 @media (min-width: $tablet-width) {
-  .main-nav {
-    background-color: $secondary-color;
-  }
-
   .main-nav__list {
     width: 768px;
     margin: 0 auto;
-    padding-left: 39px;
-    padding-right: 45px;
   }
 }
 
 @media (min-width: $desktop-width) {
   .main-nav__list {
     width: auto;
-    padding: 0;
   }
 }

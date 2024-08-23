@@ -2,6 +2,17 @@ import Swiper from 'swiper';
 import {Navigation} from 'swiper/modules';
 import 'swiper/css';
 
+const slidesPerViewCount = {
+  mobile: 1,
+  tablet: 2,
+  desktop: 3,
+};
+
+const spaceBetweenValue = {
+  tablet: 18,
+  desktop: 30,
+};
+
 const toursSliderElement = document.querySelector('.slider--tours');
 let toursSliderNavigationPrevElement;
 let toursSliderNavigationNextElement;
@@ -15,7 +26,7 @@ if (toursSliderElement) {
 
 const toursSlider = new Swiper(toursSwiperElement, {
   modules: [Navigation],
-  slidesPerView: 1,
+  slidesPerView: slidesPerViewCount.mobile,
   loop: false,
   init: false,
   navigation: {
@@ -24,12 +35,12 @@ const toursSlider = new Swiper(toursSwiperElement, {
   },
   breakpoints: {
     768: {
-      slidesPerView: 2,
-      spaceBetween: 18,
+      slidesPerView: slidesPerViewCount.tablet,
+      spaceBetween: spaceBetweenValue.tablet,
     },
     1440: {
-      slidesPerView: 3,
-      spaceBetween: 30,
+      slidesPerView: slidesPerViewCount.desktop,
+      spaceBetween: spaceBetweenValue.desktop,
       allowTouchMove: false,
     },
   },

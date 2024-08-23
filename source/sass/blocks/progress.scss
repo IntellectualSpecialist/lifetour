@@ -85,18 +85,10 @@
 
     &::before {
       display: none;
-      width: calc(100% + 10px);
-      height: 2px;
-      left: -10px;
-      bottom: -8px;
-      top: auto;
     }
 
     &::after {
       display: none;
-      top: 100%;
-      left: 10px;
-      transform: none;
     }
 
     &--movement {
@@ -109,11 +101,6 @@
 
     &--ecology {
       order: 4;
-
-      &::after {
-        left: auto;
-        right: 100%;
-      }
     }
 
     &--mountain {
@@ -124,7 +111,7 @@
 
 @media (min-width: $desktop-width) {
   .progress__title {
-    margin-bottom: 31px;
+    margin-bottom: 29px;
   }
 
   .progress__list {
@@ -150,10 +137,18 @@
 
     &::before {
       display: block;
+      width: calc(100% + 10px);
+      height: 2px;
+      left: -10px;
+      bottom: -8px;
+      top: auto;
     }
 
     &::after {
       display: block;
+      top: 100%;
+      left: 10px;
+      transform: none;
     }
 
     &--movement {
@@ -171,6 +166,10 @@
 
     &--ecology {
       order: 3;
+
+      &::after {
+        left: -11px;
+      }
     }
 
     &--mountain {

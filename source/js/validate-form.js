@@ -17,7 +17,7 @@ const isValidEmail = (email) => {
 };
 
 const isValidPhone = (phone) => {
-  const pattern = /^\+7(\s\([0-9]{3}\)-[0-9]{3}-[0-9]{2}-[0-9]{2}|[0-9]{10})$/;
+  const pattern = /^\+?[0-9\s()-]{0,18}[0-9]{1,11}$/;
   return pattern.test(phone);
 };
 
@@ -86,9 +86,22 @@ const onFieldsChange = (evt) => {
   }
 };
 
+const onFieldsInput = (evt) => {
+  if (evt.target.matches('input')) {
+    if (evt.target.value) {
+      const currentField = evt.target.closest('.field');
+
+      if (currentField.classList.contains('field--error')) {
+        currentField.classList.remove('field--error');
+      }
+    }
+  }
+};
+
 const registerFormEvents = () => {
   formElement.addEventListener('submit', onFormSubmit);
   formElement.addEventListener('change', onFieldsChange);
+  formElement.addEventListener('input', onFieldsInput);
 };
 
 const initFormValidate = () => {
