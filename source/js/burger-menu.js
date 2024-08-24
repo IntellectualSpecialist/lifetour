@@ -11,6 +11,7 @@ const openMenu = () => {
   navBurgerElement.classList.add('burger--active');
   bodyElement.classList.add('page__body--modal-open');
   siteListElement.addEventListener('click', onNavLinkClick);
+  bodyElement.addEventListener('click', onBodyClick);
 
   const siteListHeight = siteListElement.offsetHeight;
   mainNavElement.style.height = `${siteListHeight}px`;
@@ -21,6 +22,7 @@ const closeMenu = () => {
   navBurgerElement.classList.remove('burger--active');
   bodyElement.classList.remove('page__body--modal-open');
   siteListElement.removeEventListener('click', onNavLinkClick);
+  bodyElement.removeEventListener('click', onBodyClick);
 
   setTimeout(() => {
     mainNavElement.classList.remove('main-header__nav--shown');
@@ -43,13 +45,13 @@ const onNavBurgerClick = (evt) => {
   }
 };
 
-const onBodyClick = (evt) => {
+function onBodyClick(evt) {
   if (evt.target.closest('.main-header')) {
     evt.stopPropagation();
   } else {
     closeMenu();
   }
-};
+}
 
 const registerResizeWindowEvents = () => {
   desktopWidthMediaQuery.addEventListener('change', (evt) => {
@@ -60,10 +62,8 @@ const registerResizeWindowEvents = () => {
 
       mainNavElement.removeAttribute('style');
       navBurgerElement.removeEventListener('click', onNavBurgerClick);
-      bodyElement.removeEventListener('click', onBodyClick);
     } else {
       navBurgerElement.addEventListener('click', onNavBurgerClick);
-      bodyElement.addEventListener('click', onBodyClick);
     }
   });
 };
@@ -72,7 +72,6 @@ const initNavBurger = () => {
   if (navBurgerElement) {
     if (window.innerWidth < desktopWidth) {
       navBurgerElement.addEventListener('click', onNavBurgerClick);
-      bodyElement.addEventListener('click', onBodyClick);
     }
 
     registerResizeWindowEvents();
