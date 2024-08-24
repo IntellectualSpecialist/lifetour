@@ -77,6 +77,12 @@
   }
 }
 
+.slider--gallery {
+  .slider__slide {
+    width: auto;
+  }
+}
+
 .slider--no-js {
   .slider__swiper {
     overflow: hidden;
