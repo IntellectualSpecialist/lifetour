@@ -16,7 +16,8 @@
   flex-wrap: wrap;
   justify-content: center;
   gap: 10px 20px;
-  width: fit-content;
+  width: 100%;
+  max-width: 296px;
   transform: translateX(-50%);
 }
 
@@ -129,6 +130,10 @@
 }
 
 @media (min-width: $tablet-width) {
+  .slider__pagination {
+    max-width: 665px;
+  }
+
   .slider__pagination-button {
     width: 20px;
     height: 20px;
@@ -209,6 +214,7 @@
     right: 120px;
     left: auto;
     max-width: 500px;
+    justify-content: right;
     transform: none;
   }
 
