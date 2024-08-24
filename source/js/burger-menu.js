@@ -43,6 +43,14 @@ const onNavBurgerClick = (evt) => {
   }
 };
 
+const onBodyClick = (evt) => {
+  if (evt.target.closest('.main-header')) {
+    evt.stopPropagation();
+  } else {
+    closeMenu();
+  }
+};
+
 const registerResizeWindowEvents = () => {
   desktopWidthMediaQuery.addEventListener('change', (evt) => {
     if (evt.matches) {
@@ -52,8 +60,10 @@ const registerResizeWindowEvents = () => {
 
       mainNavElement.removeAttribute('style');
       navBurgerElement.removeEventListener('click', onNavBurgerClick);
+      bodyElement.removeEventListener('click', onBodyClick);
     } else {
       navBurgerElement.addEventListener('click', onNavBurgerClick);
+      bodyElement.addEventListener('click', onBodyClick);
     }
   });
 };
@@ -62,6 +72,7 @@ const initNavBurger = () => {
   if (navBurgerElement) {
     if (window.innerWidth < desktopWidth) {
       navBurgerElement.addEventListener('click', onNavBurgerClick);
+      bodyElement.addEventListener('click', onBodyClick);
     }
 
     registerResizeWindowEvents();
