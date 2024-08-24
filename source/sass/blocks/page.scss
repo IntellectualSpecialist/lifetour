@@ -37,7 +37,7 @@
     content: "";
     position: absolute;
     z-index: 2;
-    top: 0;
+    top: 100px;
     left: 0;
     width: 100%;
     height: 100%;
@@ -72,6 +72,10 @@
       top 4148px center,
       top 2365px right,
       top 1024px right;
+
+    &--modal-open::before {
+      top: 82px;
+    }
   }
 }
 
