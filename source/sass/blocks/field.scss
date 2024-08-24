@@ -27,10 +27,6 @@
       color: rgba($base-grey, 0.5);
     }
 
-    &:user-invalid {
-      border-color: $error-color;
-    }
-
     &:focus-visible::placeholder {
       opacity: 1;
     }

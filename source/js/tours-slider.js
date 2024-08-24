@@ -29,6 +29,7 @@ const toursSlider = new Swiper(toursSwiperElement, {
   slidesPerView: slidesPerViewCount.mobile,
   loop: false,
   init: false,
+  allowTouchMove: true,
   navigation: {
     nextEl: toursSliderNavigationNextElement,
     prevEl: toursSliderNavigationPrevElement,
@@ -37,6 +38,7 @@ const toursSlider = new Swiper(toursSwiperElement, {
     768: {
       slidesPerView: slidesPerViewCount.tablet,
       spaceBetween: spaceBetweenValue.tablet,
+      allowTouchMove: true,
     },
     1440: {
       slidesPerView: slidesPerViewCount.desktop,
