@@ -1,6 +1,8 @@
-const mobileWidthOnlyMediaQuery = window.matchMedia('(max-width: 767px)');
-const tabletWidthMediaQuery = window.matchMedia('(min-width: 768px)');
-const tabletWidthOnlyMediaQuery = window.matchMedia('(max-width: 1439px)');
-const desktopWidthMediaQuery = window.matchMedia('(min-width: 1440px)');
+const desktopWidth = 1440;
+const tabletWidth = 768;
+const mobileWidthOnlyMediaQuery = window.matchMedia(`(max-width: ${tabletWidth - 1}px)`);
+const tabletWidthMediaQuery = window.matchMedia(`(min-width: ${tabletWidth}px)`);
+const tabletWidthOnlyMediaQuery = window.matchMedia(`(max-width: ${desktopWidth - 1}px)`);
+const desktopWidthMediaQuery = window.matchMedia(`(min-width: ${desktopWidth}px)`);
 
-export { mobileWidthOnlyMediaQuery, tabletWidthOnlyMediaQuery, tabletWidthMediaQuery, desktopWidthMediaQuery };
+export { desktopWidth, tabletWidth, mobileWidthOnlyMediaQuery, tabletWidthOnlyMediaQuery, tabletWidthMediaQuery, desktopWidthMediaQuery };

@@ -1,7 +1,8 @@
 import Swiper from 'swiper';
 import {Navigation} from 'swiper/modules';
 import 'swiper/css';
-import { mobileWidthOnlyMediaQuery, tabletWidthOnlyMediaQuery, tabletWidthMediaQuery, desktopWidthMediaQuery } from './const';
+import { desktopWidth, tabletWidth, mobileWidthOnlyMediaQuery, tabletWidthOnlyMediaQuery, tabletWidthMediaQuery, desktopWidthMediaQuery } from './const';
+import { changeLinksTabindex, onSlideChange} from './utils';
 
 const slidesPerViewCount = {
   mobile: 1,
@@ -22,11 +23,13 @@ let instructorsSlider;
 let instructorsSliderNavigationPrevElement;
 let instructorsSliderNavigationNextElement;
 let instructorsSwiperElement;
+let sliderLinksElements;
 
 if (instructorsSliderElement) {
   instructorsSwiperElement = instructorsSliderElement.querySelector('.slider__swiper');
   instructorsSliderNavigationPrevElement = instructorsSliderElement.querySelector('.swiper-button-prev');
   instructorsSliderNavigationNextElement = instructorsSliderElement.querySelector('.swiper-button-next');
+  sliderLinksElements = instructorsSliderElement.querySelectorAll('a[href]');
 }
 
 const defaultSettings = {
@@ -102,6 +105,8 @@ const registerResizeWindowEvents = () => {
     if (evt.matches) {
       destroySlider();
       createSlider(mobileSettings);
+      changeLinksTabindex(sliderLinksElements, slidesPerViewCount.mobile, initialSlide.mobile);
+      onSlideChange(instructorsSlider, sliderLinksElements, slidesPerViewCount.mobile);
     }
   });
 
@@ -109,6 +114,8 @@ const registerResizeWindowEvents = () => {
     if (evt.matches) {
       destroySlider();
       createSlider(tabletSettings);
+      changeLinksTabindex(sliderLinksElements, slidesPerViewCount.tablet, initialSlide.tablet);
+      onSlideChange(instructorsSlider, sliderLinksElements, slidesPerViewCount.tablet);
     }
   });
 
@@ -116,6 +123,8 @@ const registerResizeWindowEvents = () => {
     if (evt.matches) {
       destroySlider();
       createSlider(tabletSettings);
+      changeLinksTabindex(sliderLinksElements, slidesPerViewCount.tablet, initialSlide.tablet);
+      onSlideChange(instructorsSlider, sliderLinksElements, slidesPerViewCount.tablet);
     }
   });
 
@@ -123,6 +132,8 @@ const registerResizeWindowEvents = () => {
     if (evt.matches) {
       destroySlider();
       createSlider(desktopSettings);
+      changeLinksTabindex(sliderLinksElements, slidesPerViewCount.desktop, initialSlide.desktop);
+      onSlideChange(instructorsSlider, sliderLinksElements, slidesPerViewCount.desktop);
     }
   });
 };
@@ -131,6 +142,21 @@ const initInstructorsSlider = () => {
   if (instructorsSliderElement) {
     createSlider();
     registerResizeWindowEvents();
+
+    if (window.innerWidth < tabletWidth) {
+      changeLinksTabindex(sliderLinksElements, slidesPerViewCount.mobile, initialSlide.mobile);
+      onSlideChange(instructorsSlider, sliderLinksElements, slidesPerViewCount.mobile);
+    }
+
+    if (window.innerWidth < desktopWidth && window.innerWidth >= tabletWidth) {
+      changeLinksTabindex(sliderLinksElements, slidesPerViewCount.tablet, initialSlide.tablet);
+      onSlideChange(instructorsSlider, sliderLinksElements, slidesPerViewCount.tablet);
+    }
+
+    if (window.innerWidth >= desktopWidth) {
+      changeLinksTabindex(sliderLinksElements, slidesPerViewCount.desktop, initialSlide.desktop);
+      onSlideChange(instructorsSlider, sliderLinksElements, slidesPerViewCount.desktop);
+    }
   }
 };
 

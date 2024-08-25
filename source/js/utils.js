@@ -23,4 +23,36 @@ const updateDuplicateText = () => {
   }
 };
 
-export { removeSlidersNoJsClass, updateDuplicateText };
+const setLinksTabindex = (sliderLinks) => {
+  sliderLinks.forEach((link) => {
+    link.setAttribute('tabindex', '-1');
+  });
+};
+
+const changeLinksTabindex = (sliderLinks, slidesPerView, startSlide) => {
+  setLinksTabindex(sliderLinks);
+
+  for (let i = 0; i < slidesPerView; i++) {
+    sliderLinks[startSlide + i].setAttribute('tabindex', '0');
+  }
+};
+
+const onSlideChange = (slider, sliderLinks, slidesPerView) => {
+  slider.on('slideChange', () => {
+    const activeSlideIndex = slider.activeIndex;
+
+    setLinksTabindex(sliderLinks);
+    changeLinksTabindex(sliderLinks, slidesPerView, activeSlideIndex);
+  });
+};
+
+const debounce = (callback, timeoutDelay) => {
+  let timeoutId;
+
+  return (...rest) => {
+    clearTimeout(timeoutId);
+    timeoutId = setTimeout(() => callback.apply(this, rest), timeoutDelay);
+  };
+};
+
+export { removeSlidersNoJsClass, updateDuplicateText, changeLinksTabindex, onSlideChange, debounce};

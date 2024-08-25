@@ -1,9 +1,8 @@
 import Swiper from 'swiper';
 import {Navigation} from 'swiper/modules';
 import 'swiper/css';
-import { tabletWidthOnlyMediaQuery, desktopWidthMediaQuery } from './const';
+import { desktopWidth, tabletWidthOnlyMediaQuery, desktopWidthMediaQuery } from './const';
 
-const desktopWidth = 1440;
 const spaceBetweenValue = 5;
 const slidesPerViewCount = {
   mobile: 2,

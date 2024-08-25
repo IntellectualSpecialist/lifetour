@@ -1,6 +1,8 @@
-import { desktopWidthMediaQuery } from './const';
+import { desktopWidthMediaQuery, desktopWidth } from './const';
+import { debounce } from './utils';
 
-const desktopWidth = 1440;
+const removeNavDelay = 250;
+const renderDelay = 300;
 const bodyElement = document.querySelector('.page__body');
 const mainNavElement = bodyElement.querySelector('.main-header__nav');
 const navBurgerElement = bodyElement.querySelector('.js-toggle-button');
@@ -26,8 +28,11 @@ const closeMenu = () => {
 
   setTimeout(() => {
     mainNavElement.classList.remove('main-header__nav--shown');
-  }, 250);
+  }, removeNavDelay);
 };
+
+const debounceOpenMenu = debounce(openMenu, renderDelay);
+const debounceCloseMenu = debounce(closeMenu, renderDelay);
 
 function onNavLinkClick(evt) {
   if (evt.target.matches('.site-list__link')) {
@@ -39,9 +44,9 @@ const onNavBurgerClick = (evt) => {
   evt.preventDefault();
 
   if (mainNavElement.classList.contains('main-header__nav--shown')) {
-    closeMenu();
+    debounceCloseMenu();
   } else {
-    openMenu();
+    debounceOpenMenu();
   }
 };
 

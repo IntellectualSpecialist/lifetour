@@ -1,16 +1,17 @@
 import Swiper from 'swiper';
 import {Pagination} from 'swiper/modules';
 import 'swiper/css';
+import { changeLinksTabindex, onSlideChange} from './utils';
 
 const initialSlide = 0;
 const slidesPerViewCount = 1;
 const promoSliderElement = document.querySelector('.slider--promo');
-let sliderLinks;
+let sliderLinksElements;
 let promoSliderPaginatonElement;
 
 if (promoSliderElement) {
   promoSliderPaginatonElement = promoSliderElement.querySelector('.slider__pagination');
-  sliderLinks = promoSliderElement.querySelectorAll('a[href]');
+  sliderLinksElements = promoSliderElement.querySelectorAll('a[href]');
 }
 
 const promoSlider = new Swiper(promoSliderElement, {
@@ -25,7 +26,7 @@ const promoSlider = new Swiper(promoSliderElement, {
     bulletActiveClass: 'slider__pagination-button--active',
     renderBullet: function (index, className) {
       return `<button class="${className}" type="button">
-                <span class="visually-hidden">${index + 1} слайд</span>
+                <span class="visually-hidden">Cлайд ${index + 1}</span>
               </button>`;
     },
   },
@@ -36,26 +37,11 @@ const promoSlider = new Swiper(promoSliderElement, {
   },
 });
 
-const setLinksTabindex = () => {
-  sliderLinks.forEach((link) => {
-    link.setAttribute('tabindex', '-1');
-  });
-};
-
-const onSlideChange = () => {
-  promoSlider.on('slideChange', () => {
-    setLinksTabindex();
-    promoSlider.slides[promoSlider.activeIndex].querySelector('a[href]').setAttribute('tabindex', '0');
-  });
-};
-
 const initPromoSlider = () => {
   if (promoSliderElement) {
-    setLinksTabindex();
-    sliderLinks[initialSlide].setAttribute('tabindex', '0');
-
     promoSlider.init();
-    onSlideChange();
+    changeLinksTabindex(sliderLinksElements, slidesPerViewCount, initialSlide);
+    onSlideChange(promoSlider, sliderLinksElements, slidesPerViewCount);
   }
 };
 

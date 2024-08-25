@@ -1,13 +1,12 @@
 import Swiper from 'swiper';
 import {Navigation} from 'swiper/modules';
 import 'swiper/css';
-import { tabletWidthOnlyMediaQuery, desktopWidthMediaQuery } from './const';
+import { desktopWidth, tabletWidthOnlyMediaQuery, desktopWidthMediaQuery } from './const';
 
 const initialSlideNumber = 2;
 const spaceBetweenValue = 30;
 const slidesPerGroupCount = 2;
 const minSlidesCount = 8;
-const desktopWidth = 1440;
 
 const fragment = document.createDocumentFragment();
 const featuresSliderElement = document.querySelector('.slider--features');
