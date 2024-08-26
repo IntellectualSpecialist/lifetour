@@ -34,6 +34,10 @@ const cleanFields = () => {
   }
 };
 
+const setNovalidateAttribute = () => {
+  formElement.setAttribute('novalidate', 'true');
+};
+
 const onFormSubmit = (evt) => {
   evt.preventDefault();
 
@@ -106,6 +110,7 @@ const registerFormEvents = () => {
 
 const initFormValidate = () => {
   if (formElement) {
+    setNovalidateAttribute();
     cleanFields();
     registerFormEvents();
   }

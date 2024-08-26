@@ -40,6 +40,10 @@
   &--disabled {
     color: $base-grey;
     pointer-events: none;
+
+    &:focus-visible {
+      border-color: transparent;
+    }
   }
 }
 
@@ -75,6 +79,10 @@
   .site-list__link--disabled {
     color: $base-grey;
     pointer-events: none;
+
+    &:focus-visible {
+      border-color: transparent;
+    }
   }
 }
 

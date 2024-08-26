@@ -740,7 +740,7 @@
                     <p>Уделяем внимание безопасности клиентов, внедряя строгие процедуры и протоколы безопасности. Имеем планы действий на случай непредвиденных обстоятельств и даём гарантию полной безопасности во время всего тура.</p>
                   </div>
                 </div>
-                 <div class="features__item slider__slide swiper-slide">
+                <div class="features__item slider__slide swiper-slide">
                   <div class="features__icon">
                     <svg width="24" height="24" viewBox="0 0 24 24" role="img" aria-labelledby="expertise">
                       <title id="expertise">Экспертиза и знания</title>
@@ -900,10 +900,10 @@
             <p>Заполните форму и наш оператор свяжется с вами&nbsp;для консультации.</p>
           </div>
           <div class="callback__form form">
-            <form action="https://echo.htmlacademy.ru/" method="post" novalidate>
+            <form action="https://echo.htmlacademy.ru/" method="post">
               <label class="form__field field">
                 <span class="field__label">Телефон</span>
-                <input type="tel" name="phone" id="phone" placeholder="+7 (000)-000-00-00" required>
+                <input type="tel" name="phone" id="phone" placeholder="+7 (000)-000-00-00" pattern="[^a-zA-Zа-яёА-ЯЁ]*" required>
               </label>
               <label class="form__field field">
                 <span class="field__label">Email</span>
@@ -1031,7 +1031,7 @@
         </div>
       </div>
     </footer>
-    <script type="module" src="js/main.js"></script>
+    <!-- <script type="module" src="js/main.js"></script> -->
   </body>
 
 </html>

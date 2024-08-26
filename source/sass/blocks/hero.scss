@@ -1,6 +1,7 @@
 .hero__slider {
   width: 320px;
   margin: 0 auto;
+  background-color: $hero-bg;
 }
 
 @media (min-width: $tablet-width) {
