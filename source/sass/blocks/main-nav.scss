@@ -4,12 +4,16 @@
 
 .main-nav__list {
   width: 320px;
+  max-height: calc(100vh - 100px);
   margin: 0 auto;
+  overflow: scroll;
+  scrollbar-width: none;
 }
 
 @media (min-width: $tablet-width) {
   .main-nav__list {
     width: 768px;
+    max-height: calc(100vh - 82px);
     margin: 0 auto;
   }
 }
@@ -17,5 +21,7 @@
 @media (min-width: $desktop-width) {
   .main-nav__list {
     width: auto;
+    max-height: none;
+    overflow: auto;
   }
 }
