@@ -3,7 +3,6 @@ import {Pagination} from 'swiper/modules';
 import 'swiper/css';
 import { changeLinksTabindex, onSlideChange} from './utils';
 
-const initialSlide = 0;
 const slidesPerViewCount = 1;
 const promoSliderElement = document.querySelector('.slider--promo');
 let sliderLinksElements;
@@ -40,7 +39,7 @@ const promoSlider = new Swiper(promoSliderElement, {
 const initPromoSlider = () => {
   if (promoSliderElement) {
     promoSlider.init();
-    changeLinksTabindex(sliderLinksElements, slidesPerViewCount, initialSlide);
+    changeLinksTabindex(sliderLinksElements, slidesPerViewCount, promoSlider.activeIndex);
     onSlideChange(promoSlider, sliderLinksElements, slidesPerViewCount);
   }
 };
