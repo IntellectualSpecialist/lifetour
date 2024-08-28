@@ -41,7 +41,6 @@ const onSlideChange = (slider, sliderLinks, slidesPerView) => {
   slider.on('slideChange', () => {
     const activeSlideIndex = slider.activeIndex;
 
-    setLinksTabindex(sliderLinks);
     changeLinksTabindex(sliderLinks, slidesPerView, activeSlideIndex);
   });
 };
