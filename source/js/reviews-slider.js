@@ -10,7 +10,7 @@ const spaceBetween = {
   desktop: 120,
 };
 const slidesOffset = {
-  tablet: 50,
+  tablet: 60,
   desktop: 50,
 };
 

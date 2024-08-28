@@ -41,7 +41,7 @@
     color: rgba($base-grey, 0.5);
   }
 
-  &:has(input:focus) {
+  &:has(input:focus-visible) {
     .field__label {
       display: none;
     }
