@@ -12,7 +12,7 @@ if (formElement) {
 }
 
 const isValidEmail = (email) => {
-  const pattern = /^[a-zA-Zа-яёА-ЯЁ0-9._%+-]+@[a-zA-Zа-яёА-ЯЁ0-9.-]+\.[рф|a-zA-Z0-9-]{2,}$/;
+  const pattern = /^[a-zA-Zа-яёА-ЯЁ0-9._%+-]+@[a-zA-Zа-яёА-ЯЁ0-9.-]+\.[рф|РФ|a-zA-Z0-9-]{2,}$/;
   return pattern.test(email);
 };
 
@@ -22,16 +22,15 @@ const isValidPhone = (phone) => {
 };
 
 const cleanFields = () => {
-  const phone = phoneInputElement.value;
-  const email = emailInputElement.value;
-
-  if (phone) {
-    phoneInputElement.value = '';
+  if (phoneFieldElement.classList.contains('field--error')) {
+    phoneFieldElement.classList.remove('field--error');
   }
 
-  if (email) {
-    emailInputElement.value = '';
+  if (emailFieldElement.classList.contains('field--error')) {
+    emailFieldElement.classList.remove('field--error');
   }
+
+  formElement.reset();
 };
 
 const setNovalidateAttribute = () => {
@@ -44,36 +43,46 @@ const onFormSubmit = (evt) => {
   const phone = phoneInputElement.value;
   const email = emailInputElement.value;
 
-  if (phoneFieldElement.classList.contains('field--error')) {
-    phoneFieldElement.classList.remove('field--error');
-  }
-
-  if (emailFieldElement.classList.contains('field--error')) {
-    emailFieldElement.classList.remove('field--error');
-  }
-
   if (!phone || !email) {
-    if (!email) {
-      emailFieldElement.classList.add('field--error');
-    }
-
     if (!phone) {
+      phoneInputElement.setCustomValidity('Заполните поле.');
       phoneFieldElement.classList.add('field--error');
+      phoneInputElement.reportValidity();
+
+      return;
+    } else {
+      phoneInputElement.setCustomValidity('');
     }
 
-    return;
+    if (!email) {
+      emailInputElement.setCustomValidity('Заполните поле.');
+      emailFieldElement.classList.add('field--error');
+      emailInputElement.reportValidity();
+
+      return;
+    } else {
+      emailInputElement.setCustomValidity('');
+    }
   }
 
   if (!isValidPhone(phone)) {
+    phoneInputElement.setCustomValidity('Допустимы только цифры, пробелы и символы: "+-()".');
     phoneFieldElement.classList.add('field--error');
+    phoneInputElement.reportValidity();
 
     return;
+  } else {
+    phoneInputElement.setCustomValidity('');
   }
 
   if (!isValidEmail(email)) {
+    emailInputElement.setCustomValidity('Email должен быть в формате "example@domen.ru".');
     emailFieldElement.classList.add('field--error');
+    emailInputElement.reportValidity();
 
     return;
+  } else {
+    emailInputElement.setCustomValidity('');
   }
 
   formElement.submit();
