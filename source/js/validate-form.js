@@ -1,3 +1,8 @@
+const alertMessages = {
+  empty: 'Заполните поле.',
+  phone: 'Допустимы только цифры, пробелы и символы: "+-()".',
+  email: 'Email должен быть в формате "example@domen.ru".'
+};
 const formElement = document.querySelector('.form form');
 let phoneInputElement;
 let emailInputElement;
@@ -45,7 +50,7 @@ const onFormSubmit = (evt) => {
 
   if (!phone || !email) {
     if (!phone) {
-      phoneInputElement.setCustomValidity('Заполните поле.');
+      phoneInputElement.setCustomValidity(alertMessages.empty);
       phoneFieldElement.classList.add('field--error');
       phoneInputElement.reportValidity();
 
@@ -55,7 +60,7 @@ const onFormSubmit = (evt) => {
     }
 
     if (!email) {
-      emailInputElement.setCustomValidity('Заполните поле.');
+      emailInputElement.setCustomValidity(alertMessages.empty);
       emailFieldElement.classList.add('field--error');
       emailInputElement.reportValidity();
 
@@ -66,7 +71,7 @@ const onFormSubmit = (evt) => {
   }
 
   if (!isValidPhone(phone)) {
-    phoneInputElement.setCustomValidity('Допустимы только цифры, пробелы и символы: "+-()".');
+    phoneInputElement.setCustomValidity(alertMessages.phone);
     phoneFieldElement.classList.add('field--error');
     phoneInputElement.reportValidity();
 
@@ -76,7 +81,7 @@ const onFormSubmit = (evt) => {
   }
 
   if (!isValidEmail(email)) {
-    emailInputElement.setCustomValidity('Email должен быть в формате "example@domen.ru".');
+    emailInputElement.setCustomValidity(alertMessages.email);
     emailFieldElement.classList.add('field--error');
     emailInputElement.reportValidity();
 
