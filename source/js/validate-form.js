@@ -99,6 +99,7 @@ const onFormSubmit = (evt) => {
   }
 
   formElement.submit();
+  cleanFields();
 };
 
 const onFieldsChange = (evt) => {
