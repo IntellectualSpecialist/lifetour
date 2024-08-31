@@ -74,6 +74,14 @@
   }
 }
 
+.field--no-js {
+  input {
+    &:user-invalid {
+      border-color: $error-color;
+    }
+  }
+}
+
 .field__label {
   position: absolute;
   left: 15px;

@@ -8,22 +8,30 @@ let phoneInputElement;
 let emailInputElement;
 let phoneFieldElement;
 let emailFieldElement;
+let fieldElements;
 
 if (formElement) {
   phoneInputElement = formElement.querySelector('#phone');
   emailInputElement = formElement.querySelector('#email');
   phoneFieldElement = phoneInputElement.closest('.field');
   emailFieldElement = emailInputElement.closest('.field');
+  fieldElements = formElement.querySelectorAll('.field');
 }
 
 const isValidEmail = (email) => {
-  const pattern = /^[a-zA-Zа-яёА-ЯЁ0-9._%+-]+@[a-zA-Zа-яёА-ЯЁ0-9.-]+\.[рф|РФ|a-zA-Z0-9-]{2,}$/;
+  const pattern = /^[a-zA-Zа-яёА-ЯЁ0-9._%+-]+@[a-zA-Zа-яёА-ЯЁ0-9.-]+\.[рР][фФ]|[a-zA-Z0-9-]{2,}$/;
   return pattern.test(email);
 };
 
 const isValidPhone = (phone) => {
   const pattern = /^\+?[0-9\s()-]{0,18}[0-9]{1,11}$/;
   return pattern.test(phone);
+};
+
+const removeNoJsClass = () => {
+  fieldElements.forEach((field) => {
+    field.classList.remove('field--no-js');
+  });
 };
 
 const cleanFields = () => {
@@ -124,6 +132,7 @@ const registerFormEvents = () => {
 
 const initFormValidate = () => {
   if (formElement) {
+    removeNoJsClass();
     setNovalidateAttribute();
     cleanFields();
     registerFormEvents();

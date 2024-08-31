@@ -42,13 +42,13 @@
 .gallery .gallery__item--grid {
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 7px;
 }
 
 .gallery__item--grid .gallery__image:first-child {
   img {
     width: 157px;
-    height: 135px;
+    height: 134.5px;
   }
 }
 
@@ -92,8 +92,6 @@
     }
 
     &--grid {
-      gap: 7px;
-
       .gallery__image {
         &:first-child {
           img {
@@ -146,8 +144,6 @@
       }
 
       &--grid {
-        gap: 6.5px;
-
         .gallery__image {
           &:first-child {
             img {
