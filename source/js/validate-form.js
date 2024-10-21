@@ -19,7 +19,7 @@ if (formElement) {
 }
 
 const isValidEmail = (email) => {
-  const pattern = /^[a-zA-Zа-яёА-ЯЁ0-9._%+-]+@[a-zA-Zа-яёА-ЯЁ0-9.-]+\.[рР][фФ]|[a-zA-Z0-9-]{2,}$/;
+  const pattern = /^[a-zA-Zа-яёА-ЯЁ0-9._%+-]+@[a-zA-Zа-яёА-ЯЁ0-9.-]+\.(?:[рР][фФ]|[a-zA-Z0-9-]{2,})$/;
   return pattern.test(email);
 };
 
